@@ -7,9 +7,10 @@ html
 
 h1
 {
+    color:#FFFFFF;
     padding:25px;
     font-size: 50px;
     text-align:center;
-    background-color:FF0000;
+    background-color:#0066FF;
     border-radius:10px;
 }
