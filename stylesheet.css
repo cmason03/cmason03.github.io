@@ -1,19 +1,21 @@
 html
 {
     font-family: Verdana;
+    \\background-color:E8E8E8;
+    
 }
 
 #experience
 {
 font-family: Verdana;
 padding-bottom:10px;
-padding-top:10px;
-background-color:66CCFF;
 border-radius:10px;
 }
 
 h1
 {
+    padding:25px;
+    font-size: 50px;
     text-align:center;
     background-color:66CCFF;
     border-radius:10px;
