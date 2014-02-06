@@ -1,15 +1,21 @@
+html
+{
+    font-family:Verdana;
+}
 h1
 {
+    color:#FFFFFF;
     text-align:center;
-    background-color:FFFF00;
+    background-color:#3300FF;
     border-radius:10px;
+    
 }
 
 img
 {
     display:block;
-    height:400px;
-    width: auto;
+    height:auto;
+    width: 300px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -17,14 +23,26 @@ img
 #resumelink
 {
     display:inline-block;
-    background-color:3300FF;
+    padding:30px;
+    font-size:30px;
+    color:#FFFFFF;
+    display:inline-block;
+    background-color:#3300FF;
     border-radius:10px;
+    margin-left:auto;
+    margin-right:auto;
 }
 
 #biolink
 {
     display:inline-block;
-    background-color:3300FF;
+    margin-left:auto;
+    margin-right:auto; 
+    padding:30px;
+    font-size:30px;
+    color:#FFFFFF;
+    display:inline-block;
+    background-color:#3300FF;
     border-radius:10px;
 }
 

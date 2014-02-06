@@ -1,6 +1,6 @@
 html
 {
-    font-family: Verdana;
+    font-family:Verdana;
    
     
 }
@@ -10,6 +10,6 @@ h1
     padding:25px;
     font-size: 50px;
     text-align:center;
-    background-color:66CCFF;
+    background-color:FF0000;
     border-radius:10px;
 }
