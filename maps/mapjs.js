@@ -27,7 +27,8 @@ function getLocation()
 });
    }
 
-window.onload = loadScript;  	
+google.maps.event.addDomListener(window, 'load', initialize);
+	
   
 
     
