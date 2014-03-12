@@ -23,7 +23,7 @@ function getLocation()
             mapOptions);
         var myMarker = new google.maps.Marker({
         	position: myLocation});
-         marker.push(myMarker);
+         myMarker.push();
 
         }
 
