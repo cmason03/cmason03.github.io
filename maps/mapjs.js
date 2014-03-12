@@ -13,24 +13,22 @@
 			{
 				
 				if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
-					navigator.geolocation.getCurrentPosition(showPosition) {
-						var myLat = position.coords.latitude;
-						var myLng = position.coords.longitude;
-						renderMap();
-						alert("getMyLocation is working!")
+					navigator.geolocation.getCurrentPosition(initialize) };
 						
-						
-					});
-				}
+					
 
 				else {
 					alert("Geolocation is not supported by your web browser.  What a shame!");
 				}
 			} 
 
-      function initialize() {
+      function initialize(position) {
+
+      	var myLat = position.coords.latitude;
+		var myLng = position.coords.longitude;
+
         var mapOptions = {
-          center: new google.maps.LatLng(5, 30),
+          center: new google.maps.LatLng(myLat, myLng),
           zoom: 8
           
         };
