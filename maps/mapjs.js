@@ -13,7 +13,7 @@
 			{
 				
 				if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
-					navigator.geolocation.getCurrentPosition(initialize) };
+					navigator.geolocation.getCurrentPosition(initialize); }
 						
 					
 
