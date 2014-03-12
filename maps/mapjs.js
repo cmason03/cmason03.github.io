@@ -11,11 +11,11 @@
 
       function getMyLocation()
 			{
-				console.log("please work");
+				
 				if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
 					navigator.geolocation.getCurrentPosition(function(position) {
-						myLat = position.coords.latitude;
-						myLng = position.coords.longitude;
+						var myLat = position.coords.latitude;
+						var myLng = position.coords.longitude;
 						renderMap();
 						
 						
@@ -29,7 +29,7 @@
 
       function initialize() {
         var mapOptions = {
-          center: new google.maps.LatLng(80, 80),
+          center: new google.maps.LatLng(myLat, myLng),
           zoom: 8
           
         };
