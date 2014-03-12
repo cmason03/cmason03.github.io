@@ -21,10 +21,10 @@ function getLocation()
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
 
-        var myMarker = new google.maps.Marker ({
+       /* var myMarker = new google.maps.Marker ({
 			position: myLatLng,
 			map: map });
-
+*/
       }
 
 window.onload = loadScript;  	
