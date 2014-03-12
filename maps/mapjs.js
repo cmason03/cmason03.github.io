@@ -13,7 +13,7 @@ function getLocation()
   function initialize(position) {
         var mapOptions = {
           center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
-          zoom: 8
+          zoom: 15
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
