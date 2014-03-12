@@ -24,8 +24,11 @@
 
       function initialize(position) {
 
-      	var myLat = position.coords.latitude;
-		var myLng = position.coords.longitude;
+      var latlon=position.coords.latitude+","+position.coords.longitude;
+
+  var img_url="http://maps.googleapis.com/maps/api/staticmap?center="
+  +latlon+"&zoom=14&size=400x300&sensor=false";
+  document.getElementById("mapholder").innerHTML="<img src='"+img_url+"'>";
 
         var mapOptions = {
           center: new google.maps.LatLng(myLat, myLng),
