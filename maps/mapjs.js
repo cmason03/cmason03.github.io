@@ -1,4 +1,4 @@
-var numstations = 0;
+var numStations = 0;
 var parsed = [];
 
 function parse() {
@@ -19,7 +19,7 @@ if(parsed[i].line == "Blue"){
 
 function trainPins(line){
 
-for( var i=1; i<40; i++){
+for( var i=1; i<numStations; i++){
 
 if(parsed[i].line == line){
 	stationLocation = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
