@@ -1,7 +1,7 @@
 
 
 function parse() {
-		var string = '[{"line":"Blue","station":"Airport","lat":42.374262,"lng":-71.030395},
+		 string = '[{"line":"Blue","station":"Airport","lat":42.374262,"lng":-71.030395},
 {"line":"Blue","station":"Aquarium","lat":42.359784,"lng":-71.051652},
 {"line":"Blue","station":"Beachmont","lat":42.39754234,"lng":-70.99231944},
 {"line":"Blue","station":"Bowdoin","lat":42.361365,"lng":-71.062037},
