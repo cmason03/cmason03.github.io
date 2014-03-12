@@ -11,7 +11,7 @@ var numStations = Object.keys(parsed).length;
 for( var i=1; i<numStations; i++){
 
 
-if(parsed[i].line == "Blue"){
+if(parsed[i].line === "Blue"){
 	console.log(parsed[i].station);
 }
 
