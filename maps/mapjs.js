@@ -20,8 +20,11 @@ function getLocation()
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
+        var myMarker = new google.maps.Marker({
+        	position: center});
+        }
 
-      }
+      
 
 	google.maps.event.addDomListener(window, 'load', getLocation);
 
