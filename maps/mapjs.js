@@ -16,6 +16,7 @@
 						myLat = position.coords.latitude;
 						myLng = position.coords.longitude;
 						renderMap();
+						console.log("fuck you location");
 						console.log("myLat");
 						
 					});
