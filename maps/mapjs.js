@@ -13,15 +13,16 @@ function getLocation()
   }
   function initialize(position) {
         
+        myLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
         var mapOptions = {
-          center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
+          center: myLocation,
           zoom: 15
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
         var myMarker = new google.maps.Marker({
-        	position: center});
+        	position: myLocation});
         }
 
       
