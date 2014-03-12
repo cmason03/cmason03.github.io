@@ -29,7 +29,7 @@
 
       function initialize() {
         var mapOptions = {
-          center: new google.maps.LatLng(80, 0),
+          center: new google.maps.LatLng(80, 80),
           zoom: 8
           
         };
