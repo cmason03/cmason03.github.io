@@ -19,7 +19,7 @@ if(parsed[i].line == "Blue"){
 
 function trainPins(line){
 
-for( var i=1; i<numStations; i++){
+for( var i=1; i<40; i++){
 
 if(parsed[i].line == line){
 	stationLocation = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
