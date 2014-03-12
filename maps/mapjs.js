@@ -17,7 +17,19 @@ if(parsed[i].line == "Blue"){
 }
 }
 
+function trainPins(line){
 
+for( var i=1; i<numStations; i++){
+
+if(parsed[i].line == "Blue"){
+	stationLocation = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
+
+	var newMarker = new google.maps.Marker({
+        	position: stationLocation, map: map,});
+}
+
+};
+}
 
 function getLocation()
   {
@@ -39,8 +51,6 @@ function getLocation()
             mapOptions);
         var myMarker = new google.maps.Marker({
         	position: myLocation, map: map,});
-
-        console.log(parsed[2].station);
         }
 
 function placeMarkers(){
