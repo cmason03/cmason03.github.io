@@ -9,7 +9,11 @@ parsed=JSON.parse(string);
 var numStations = Object.keys(parsed).length;
 
 for( var i=1; i<numStations; i++){
-console.log(parsed[i].line);
+
+
+if(parsed[i].line == "Blue"){
+	console.log(parsed[i].station);
+}
 
 }
 }
