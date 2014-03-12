@@ -57,7 +57,7 @@ function parse() {
 
 parsed=JSON.parse(str);
 var numStations = Object.keys(parsed).length;
-
+}
 
 
 
