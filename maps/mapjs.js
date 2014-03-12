@@ -16,7 +16,7 @@
 						myLat = position.coords.latitude;
 						myLng = position.coords.longitude;
 						renderMap();
-						console.log(myLat);
+						
 					});
 				}
 
@@ -29,7 +29,7 @@
         var mapOptions = {
           center: new google.maps.LatLng(16, 150.644),
           zoom: 8
-          console.log("zoom");
+          
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
