@@ -47,7 +47,7 @@ function getLocation()
           center: myLocation,
           zoom: 15
         };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
+        var map = new window.google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
         var myMarker = new google.maps.Marker({
         	position: myLocation, map: map,});
