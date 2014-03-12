@@ -8,7 +8,7 @@
     }
       
 
-/*
+
       function getMyLocation()
 			{
 				if (navigator.geolocation) { // the navigator.geolocation object is supported on your browser
@@ -23,7 +23,7 @@
 					alert("Geolocation is not supported by your web browser.  What a shame!");
 				}
 			}
-*/
+
 
       function initialize() {
         var mapOptions = {
