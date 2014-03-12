@@ -1,5 +1,5 @@
 
-
+/*
 function parse() {
 		var str = "[{"line":"Blue","station":"Airport","lat":42.374262,"lng":-71.030395},
 {"line":"Blue","station":"Aquarium","lat":42.359784,"lng":-71.051652},
@@ -58,7 +58,7 @@ function parse() {
 parsed=JSON.parse(str);
 var numStations = Object.keys(parsed).length;
 }
-
+*/
 
 
 function getLocation()
