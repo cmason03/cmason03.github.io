@@ -22,8 +22,8 @@ function getLocation()
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
         var myMarker = new google.maps.Marker({
-        	position: myLocation});
-        markers.push(myMarker);
+        	position: myLocation, map: map});
+        
 
         }
 
