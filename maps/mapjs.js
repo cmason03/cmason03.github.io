@@ -30,7 +30,7 @@
 
       function initialize() {
         var mapOptions = {
-          center: new google.maps.LatLng(myLat, myLng),
+          center: new google.maps.LatLng(5, 30),
           zoom: 8
           
         };
