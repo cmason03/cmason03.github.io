@@ -91,7 +91,7 @@ function placeMarkers(){
     }
         }
 		}
-      }
+     
 
 	google.maps.event.addDomListener(window, 'load', getLocation);
 
