@@ -1,7 +1,6 @@
 
 
 
-function dropPersonPin()
 
 function getLocation()
   {
