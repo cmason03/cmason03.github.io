@@ -3,7 +3,7 @@ function getLocation()
   {
   if (navigator.geolocation)
     {
-    navigator.geolocation.getCurrentPosition(initialize,dropPersonPin);
+    navigator.geolocation.getCurrentPosition(initialize);
     }
   else{alert("Geolocation is not supported by this browser.");}
   }
