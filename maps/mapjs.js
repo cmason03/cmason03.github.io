@@ -1,4 +1,4 @@
-
+numstations = 0;
 parsed = [];
 
 function parse() {
