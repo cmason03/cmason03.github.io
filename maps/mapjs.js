@@ -2,6 +2,7 @@
 
 
 
+
 function getLocation()
   {
   if (navigator.geolocation)
@@ -12,21 +13,17 @@ function getLocation()
   }
   function initialize(position) {
         
-        var mylatLng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-		
+
         var mapOptions = {
           center: new google.maps.LatLng(position.coords.latitude, position.coords.longitude),
           zoom: 15
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
-
-       /* var myMarker = new google.maps.Marker ({
-			position: myLatLng,
-			map: map });
-*/
       }
 
+window.onload = loadScript;  	
+  
 
     
       
