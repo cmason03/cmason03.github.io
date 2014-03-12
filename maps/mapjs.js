@@ -22,7 +22,7 @@ function getLocation()
             mapOptions);
       }
 
-window.onload = loadScript;  	
+	
   
 
     
