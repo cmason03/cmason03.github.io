@@ -21,7 +21,7 @@ function trainPins(line){
 
 for( var i=1; i<numStations; i++){
 
-if(parsed[i].line == "Blue"){
+if(parsed[i].line == line){
 	stationLocation = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
 
 	var newMarker = new google.maps.Marker({
