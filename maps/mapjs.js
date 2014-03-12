@@ -28,7 +28,7 @@ if(parsed[i].line == line){
         	position: stationLocation, map: map,});
 }
 
-};
+}
 }
 
 function getLocation()
