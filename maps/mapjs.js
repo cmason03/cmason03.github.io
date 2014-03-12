@@ -17,6 +17,7 @@
 						var myLat = position.coords.latitude;
 						var myLng = position.coords.longitude;
 						renderMap();
+						alert("getMyLocation is working!")
 						
 						
 					});
