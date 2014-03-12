@@ -17,8 +17,7 @@
 						myLat = position.coords.latitude;
 						myLng = position.coords.longitude;
 						renderMap();
-						console.log("fuck you location");
-						console.log("myLat");
+						
 						
 					});
 				}
@@ -30,7 +29,7 @@
 
       function initialize() {
         var mapOptions = {
-          center: new google.maps.LatLng(0, 0),
+          center: new google.maps.LatLng(80, 0),
           zoom: 8
           
         };
