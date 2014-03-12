@@ -5,7 +5,7 @@
       var myLong= 0;
 
 
-    }
+    
       
 
 
@@ -16,14 +16,14 @@
 						myLat = position.coords.latitude;
 						myLng = position.coords.longitude;
 						renderMap();
+						console.log("myLat")
 					});
 				}
 
 				else {
 					alert("Geolocation is not supported by your web browser.  What a shame!");
 				}
-			}
-
+			} 
 
       function initialize() {
         var mapOptions = {
