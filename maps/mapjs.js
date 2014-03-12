@@ -29,7 +29,7 @@
         var mapOptions = {
           center: new google.maps.LatLng(16, 150.644),
           zoom: 8
-          console.log("initialize works");
+          console.log(zoom);
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
