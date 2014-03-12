@@ -84,7 +84,7 @@ function getLocation()
         }
 
 function placeMarkers(){
-	for(i=0, i<(numStations), i++){
+	for (var i=0, i<(numStations), i++) {
 		if(parsed[i]."line" == "Blue"){
 		var myMarker = new google.maps.Marker({
         position: myLocation, map: map,});
