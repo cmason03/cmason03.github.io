@@ -14,6 +14,7 @@ function parse() {
 
 	for( var i=1; i<numStations; i++){
 			stationLocation[i] = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
+			console.log(stationLocation);
 			createMarker(stationLocation[i], "Blue", map);
 	}
 }
@@ -72,10 +73,10 @@ function toRad(x){
 function getDistance(myLocation,stationLocation){
 
 var lat2 = stationLocation.lat; 
-console.log(lat2);
+//console.log(lat2);
 var lon2 = stationLocation.lng; 
 var lat1 = myLocation.lat;
-console.log(lat1); 
+//console.log(lat1); 
 var lon1 = myLocation.lng; 
 
 var R = 6371; 
@@ -93,7 +94,7 @@ function closestStation(){
 	var distance =0;
 	for(var i =1; i<numStations; i++){
 		distance = getDistance(myLocation, stationLocation[i]);
-		console.log(distance);
+		//console.log(distance);
 	}
 }
 
