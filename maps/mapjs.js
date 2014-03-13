@@ -17,20 +17,6 @@ if(parsed[i].line == "Blue"){
 }
 }
 
-function trainPins(line){
-
-for( var i=1; i<numStations; i++){
-
-if(parsed[i].line == line){
-	stationLocation = new window.google.maps.LatLng(parsed[i].lat, parsed[i].lng);
-
-	var newMarker = new google.maps.Marker({
-        	position: stationLocation, map: map,});
-}
-
-}
-}
-
 function getLocation()
   {
   if (navigator.geolocation)
@@ -56,7 +42,7 @@ function getLocation()
 function createMarker(pos, t) {
     var marker = new google.maps.Marker({       
         position: pos, 
-        map: m,  // google.maps.Map 
+        map: m,  
         title: t      
     }); 
     google.maps.event.addListener(marker, 'click', function() { 
@@ -64,7 +50,20 @@ function createMarker(pos, t) {
     }); 
     return marker;  
 }
-     
+ 
+
+function trainPins(line){
+
+for( var i=1; i<numStations; i++){
+
+if(parsed[i].line == line){
+	stationLocation = new window.google.maps.LatLng(parsed[i].lat, parsed[i].lng);
+	createMarker(stationLocation, line);
+}
+
+}
+}
+    
    
 
 
