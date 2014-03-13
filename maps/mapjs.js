@@ -134,7 +134,7 @@ function addLineMarkers(){
 	var trainLine = new google.maps.Polyline({
 		path: stationLocation,
 		geodesic: true,
-		strokeColor: 'red',
+		strokeColor: '#FF0000',
 		strokeOpacity: 1.0,
 		strokeWeight: 2
 	});
