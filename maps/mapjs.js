@@ -52,6 +52,26 @@ function createMarker(pos) {
        alert("I am marker " + marker.title); 
     }); 
     return marker;  
+
+}
+
+function closestStation(){
+	var distanceArray =[];
+	var closest=0;
+	var closestStation;
+	for(var i =1; i<numStations; i++){
+		distancesAndStation[i] = { "distance": getDistance(myLocation, stationLocation[i]), "station": parsed[i].station };
+		distanceArray.push(getDistance(myLocation, stationLocation[i]));	
+	}
+	
+
+	closest= Math.min.apply(Math,distanceArray);
+	for(var i =1; i<numStations; i++){
+		if (distancesAndStation[i].distance === closest){
+			closestStation = distancesAndStation[i].station;
+		}
+	}
+
 }
 
 function addLineMarkers(){
@@ -110,24 +130,6 @@ var d = R * c * .621371; //.621371 converts km to miles
 return(d);
 }
 
-function closestStation(){
-	var distanceArray =[];
-	var closest=0;
-	var closestStation;
-	for(var i =1; i<numStations; i++){
-		distancesAndStation[i] = { "distance": getDistance(myLocation, stationLocation[i]), "station": parsed[i].station };
-		distanceArray.push(getDistance(myLocation, stationLocation[i]));	
-	}
-	
-
-	closest= Math.min.apply(Math,distanceArray);
-	for(var i =1; i<numStations; i++){
-		if (distancesAndStation[i].distance === closest){
-			closestStation = distancesAndStation[i].station;
-		}
-	}
-
-}
 
 	google.maps.event.addDomListener(window, 'load', getLocation);
 
