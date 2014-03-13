@@ -28,6 +28,7 @@ function dataReady() {
 
         if(request.status == 200) {
                 scheduleData =JSON.parse(request.responseText);
+                return scheduleData;
                 console.log('worked');
 
         }
