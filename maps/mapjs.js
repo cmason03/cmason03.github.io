@@ -63,13 +63,11 @@ function trainPins(line, googleMap){
 	}
 }
 
-
- 
-function getDistance(myLocation,stationLocation){
-
 Number.prototype.toRad = function() {
    return this * Math.PI / 180;
 }
+ 
+function getDistance(myLocation,stationLocation){
 
 var lat2 = stationLocation.lat; 
 var lon2 = stationLocation.lng; 
