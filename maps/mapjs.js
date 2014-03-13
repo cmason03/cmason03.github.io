@@ -74,7 +74,7 @@ Number.prototype.toRad = function() {
    return this * Math.PI / 180;
 }
 
-
+console.log(stationLocation);
 var lat2 = stationLocation.A; 
 console.log(lat2);
 var lon2 = stationLocation.K; 
