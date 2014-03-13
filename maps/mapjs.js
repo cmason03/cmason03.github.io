@@ -53,7 +53,7 @@ function createMarker(pos) {
     return marker;  
 }
 
-function addLineMarkers{
+function addLineMarkers(){
 	var closestStation = closestStation();
 	var line;
 	for( var i=1; i<numStations; i++){
