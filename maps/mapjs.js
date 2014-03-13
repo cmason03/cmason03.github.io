@@ -77,10 +77,10 @@ Number.prototype.toRad = function() {
 console.log(stationLocation);
 var lat2 = stationLocation.A; 
 console.log(lat2);
-var lon2 = stationLocation.K; 
+var lon2 = stationLocation.k; 
 var lat1 = myLocation.A;
 console.log(lat1); 
-var lon1 = myLocation.K; 
+var lon1 = myLocation.k; 
 console.log (lon1);
 
 var R = 6371; 
