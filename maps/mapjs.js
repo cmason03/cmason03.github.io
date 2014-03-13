@@ -21,7 +21,7 @@ function parse() {
 			
 	request = new XMLHttpRequest();
     request.open("get", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
-    request.onreadystatechange = dataReady;
+    request.onreadystatechange = dataReady();
     request.send(null);
 
 function dataReady() {
