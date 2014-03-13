@@ -5,7 +5,6 @@ var stationLocation= [];
 var myLocation;
 var distancesAndStation=[];
 var scheduleData = [];
-var xhr;
 
 
 
@@ -19,8 +18,27 @@ function parse() {
 	
 	for( var i=1; i<numStations; i++){
 			stationLocation[i] = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
-	
+			
+	request = new XMLHttpRequest();
+    request.open("get", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
+    request.onreadystatechange = dataReady;
+    request.send(null);
 
+function dataReady() {
+
+        if(request.readyState ==4 && request.status == 200) {
+                scheduleData =JSON.parse(request.responseText);
+
+                console.log('worked');
+
+        }
+        else if (request.readyState ==2 && request.status == 500)
+        {
+                alert("BADDDD, 500 status");
+        }
+
+
+}	}
 
 
 
@@ -40,15 +58,6 @@ function initialize(position) {
     center: myLocation,
     zoom: 15
   };
-
-  xhr = new XMLHttpRequest();
-			xhr.open("get", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true); // this is possible because of cross-origin resource sharing (CORS) enabled for web application
-
-			// onreadystatechange has to be set to a...
-			// ...function when request is completed, to...
-			// ...handle the response
-			xhr.onreadystatechange = dataReady;
-			xhr.send(null); // Go! Execute!
        
   map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
@@ -58,24 +67,6 @@ function initialize(position) {
 		}
 
 
-function dataReady() {
-			// The readyState numbers:
-			// 0 = not initialized
-			// 1 = Set up
-			// 2 = Sent
-			// 3 = In progress
-			// 4 = Complete
-			if (xhr.readyState == 4 && xhr.status == 200) {
-				scheduleData = JSON.parse(xhr.responseText);
-				scheduleDom = document.getElementById("schedule");
-				scheduleDom.innerHTML = scheduleData["line"];
-			}
-			else if (xhr.readyState == 4 && xhr.status == 500) {
-				scheduleDom = document.getElementById("schedule");
-				scheduleDom.innerHTML = '<p><img src="http://www.yiyinglu.com/failwhale/images/Homer_the_New_Fail_Whale_by_edwheeler.jpg" alt="fail" /></p>';
-
-			}
-		}
 
 function createMarker(pos) {
     var marker = new google.maps.Marker({       
