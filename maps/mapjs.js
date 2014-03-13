@@ -98,6 +98,7 @@ function closestStation(){
 			closestStation = distancesAndStation[i].station;
 		}
 	}
+	return closestStation;
 
 }
 
