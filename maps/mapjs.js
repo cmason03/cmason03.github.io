@@ -124,7 +124,7 @@ function addLineMarkers(){
 				}
 			}
 		}
-	for (var y=1; y<numStation; y++){
+	for (var y=1; y<numStations; y++){
 		if(parsed[y].line == line){
 			trainPath.push(stationLocation[y])
 		}
