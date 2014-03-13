@@ -10,42 +10,41 @@ parsed=JSON.parse(string);
 numStations = Object.keys(parsed).length;
 }
 
-function getLocation()
-  {
+function getLocation(){
   if (navigator.geolocation)
     {
     navigator.geolocation.getCurrentPosition(initialize);
     }
   else{alert("Geolocation is not supported by this browser.");}
-  }
-  function initialize(position) {
+}
+  
+function initialize(position) {
         
-        myLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+  myLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
 
-        var mapOptions = {
-          center: myLocation,
-          zoom: 15
-        };
-        var map = new google.maps.Map(document.getElementById("map-canvas"),
+  var mapOptions = {
+    center: myLocation,
+    zoom: 15
+  };
+       
+  var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
   
-		createMarker(myLocation, "boop", map);
-		console.log("it gets to this point");
-		for( var i=1; i<numStations; i++){
-			console.log("it gets here");
-			if(parsed[i].line == "Blue"){
-				stationLocation[i] = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
-				createMarker(stationLocation[i], "Blue", map);
-
+  createMarker(myLocation);
+		
+	for( var i=1; i<numStations; i++){
+		console.log("it gets here");
+		if(parsed[i].line == "Blue"){
+			stationLocation[i] = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
+			createMarker(stationLocation[i], "Blue", map);
+		}
+     }
 }
-        }
-    }
 
-function createMarker(pos, t, googleMap) {
+function createMarker(pos) {
     var marker = new google.maps.Marker({       
         position: pos, 
-        map: googleMap,  
-        title: t      
+        map: map     
     }); 
     google.maps.event.addListener(marker, 'click', function() { 
        alert("I am marker " + marker.title); 
