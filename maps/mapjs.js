@@ -107,7 +107,7 @@ function closestStation(){
 	
 	}
 	console.log(distances);
-	closestStation = Math.min.apply(Mat,distances.distance);
+	closestStation = Math.min.apply(Math,distances.distance);
 	console.log(closestStation);
 }
 
