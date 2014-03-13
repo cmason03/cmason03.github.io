@@ -38,8 +38,7 @@ function initialize(position) {
   createMarker(myLocation);
   closestStation();
 		}
-     }
-}
+
 
 function createMarker(pos) {
     var marker = new google.maps.Marker({       
