@@ -12,12 +12,12 @@ function parse() {
 	parsed=JSON.parse(string);
 	console.log(parsed);
 	numStations = Object.keys(parsed).length;
-	console.log(parsed[2].lat);
+	
 	for( var i=1; i<numStations; i++){
 			stationLocation[i] = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
 			
 	}
-	console.log(stationLocation[1].A);
+	
 }
 function getLocation(){
   if (navigator.geolocation)
@@ -73,12 +73,12 @@ function toRad(x){
  
 function getDistance(myLocation,stationLocation){
 
-var lat2 = stationLocation.lat; 
-//console.log(lat2);
-var lon2 = stationLocation.lng; 
-var lat1 = myLocation.lat;
-//console.log(lat1); 
-var lon1 = myLocation.lng; 
+var lat2 = stationLocation.A; 
+console.log(lat2);
+var lon2 = stationLocation.k; 
+var lat1 = myLocation.A;
+console.log(lat1); 
+var lon1 = myLocation.k; 
 
 var R = 6371; 
 var dLat = toRad(lat2-lat1);  
@@ -95,7 +95,7 @@ function closestStation(){
 	var distance =0;
 	for(var i =1; i<numStations; i++){
 		distance = getDistance(myLocation, stationLocation[i]);
-		//console.log(distance);
+		console.log(distance);
 	}
 }
 
