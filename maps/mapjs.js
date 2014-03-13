@@ -36,7 +36,7 @@ function getLocation()
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
   
-		createMarker(myLocation, "myspot", map);
+		createMarker(myLocation, "boop", map);
 		trainPins("Blue", map);
 
         }
