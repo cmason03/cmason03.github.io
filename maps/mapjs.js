@@ -100,14 +100,12 @@ function closestStation(){
 	var closestStation;
 	for(var i =1; i<numStations; i++){
 		distancesAndStation[i] = { "distance": getDistance(myLocation, stationLocation[i]), "station": parsed[i].station };
-		distanceArray[i] = getDistance(myLocation, stationLocation[i]);
-	
+		distanceArray.push(getDistance(myLocation, stationLocation[i]));	
 	}
 	console.log(distancesAndStation);
 	console.log(distanceArray);
 
-var newarray= [1,2,3,4];
-	closest= Math.min.apply(Math,newarray);
+	closest= Math.min.apply(Math,distanceArray);
 	console.log(closest);
 	closestStation = distancesAndStation[closest].station;
 	console.log(closestStation);
