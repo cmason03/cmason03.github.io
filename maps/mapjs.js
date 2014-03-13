@@ -11,7 +11,8 @@ for( var i=1; i<numStations; i++){
 
 
 if(parsed[i].line == "Blue"){
-	console.log(parsed[i].station);
+	stationLocation = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
+	createMarker(stationLocation, line, googleMap);
 }
 
 }
