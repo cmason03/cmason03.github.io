@@ -136,7 +136,7 @@ for(var i=1; i<numStations; i++){
 		}
 		else{}
 		}
-	var trainPoly = new google.maps.Polyline({
+var trainPoly = new google.maps.Polyline({
 		path: trainLine,
 		geodesic: true,
 		strokeColor: '#FF0000',
