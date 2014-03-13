@@ -123,6 +123,7 @@ function addLineMarkers(){
 				}
 			}
 		}
+		else{}
 	}
 	}
 	
@@ -134,6 +135,7 @@ for(var i=1; i<numStations; i++){
 		trainLine.push(new google.maps.LatLng(parsed[i].lat, parsed[i].lng));
 		}
 		}
+	else{}
 	var trainPoly = new google.maps.Polyline({
 		path: trainline,
 		geodesic: true,
