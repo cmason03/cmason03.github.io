@@ -8,12 +8,6 @@ function parse() {
 parsed=JSON.parse(string);
 var numStations = Object.keys(parsed).length;
 
-for( var i=1; i<numStations; i++){
-
-
-}
-
-}
 }
 
 function getLocation()
