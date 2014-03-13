@@ -67,7 +67,7 @@ function trainPins(line, googleMap){
 }
 
 function toRad(x){
-	return x*Math.Pi/180;
+	return x*(Math.Pi)/180;
 }
  
 function getDistance(myLocation,stationLocation){
