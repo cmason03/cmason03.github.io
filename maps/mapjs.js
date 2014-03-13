@@ -107,6 +107,8 @@ function closestStation(){
 	
 	}
 	console.log(distances);
+	closestStation = Math.min.apply(Mat,distances.distance);
+	console.log(closestStation);
 }
 
 	google.maps.event.addDomListener(window, 'load', getLocation);
