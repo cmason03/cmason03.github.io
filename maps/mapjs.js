@@ -112,19 +112,27 @@ function addLineMarkers(){
 	var station = closestStation();
 	console.log(closestStation);
 	var line;
+	var trainPath =[];
 	for( var i=1; i<numStations; i++){
 		if(parsed[i].station == station){
 			line = parsed[i].line;
 			console.log(line);
 			for(var j=1; j<numStations; j++){
 				if(parsed[j].line == line){
+				trainPath[j] = stationLocation[j]; 
 				console.log(stationLocation[j])
 				createMarker(stationLocation[j]);
 				}
 			}
 		}
 	}
-
+	var trainLine = new google.maps.Polylline({
+		path: trainPath,
+		geodesic; true,
+		strokeColor: red,
+		strokeOpacity: 1.0,
+		strokeWeight: 2
+	});
 }
 
 	google.maps.event.addDomListener(window, 'load', getLocation);
