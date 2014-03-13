@@ -3,7 +3,7 @@ var parsed = [];
 var map;
 var stationLocation= [];
 var myLocation;
-var distances[];
+var distances=[];
 
 
 
