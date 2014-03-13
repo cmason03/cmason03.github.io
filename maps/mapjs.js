@@ -80,7 +80,7 @@ console.log(lat1);
 var lon1 = myLocation.K; 
 
 var R = 6371; 
-var dLat = toRad((lat2-lat1));  
+var dLat = toRad((/*lat2-*/lat1));  
 console.log(dLat);
 var dLon = toRad(lon2-lon1);  
 var a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon/2) * Math.sin(dLon/2);  
