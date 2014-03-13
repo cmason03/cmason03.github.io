@@ -123,8 +123,10 @@ function addLineMarkers(){
 				}
 			}
 		}
+
 	for (var y=1; y<numStations; y++){
 		if(parsed[y].line == line){
+			console.log(parsed[y].line);
 			trainPath.push(stationLocation[y])
 		}
 	}
