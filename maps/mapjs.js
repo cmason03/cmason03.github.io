@@ -35,8 +35,9 @@ function getLocation()
         };
         var map = new window.google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
-        var myMarker = new google.maps.Marker({
-        	position: myLocation, map: map,});
+       // var myMarker = new google.maps.Marker({
+        //	position: myLocation, map: map,});
+		createMarker(myLocation, myspot);
         }
 
 function createMarker(pos, t) {
