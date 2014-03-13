@@ -113,6 +113,7 @@ function addLineMarkers(){
 	console.log(closestStation);
 	var line;
 	var trainPath =[];
+	trainpath[0] = myLocation;
 	for( var i=1; i<numStations; i++){
 		if(parsed[i].station == station){
 			line = parsed[i].line;
