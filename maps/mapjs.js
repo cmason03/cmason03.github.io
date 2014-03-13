@@ -15,7 +15,7 @@ function parse() {
 
 	for( var i=1; i<numStations; i++){
 			stationLocation[i] = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
-			createMarker(stationLocation[i], "Blue", map);
+			
 	}
 	console.log(stationLocation);
 }
