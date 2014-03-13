@@ -29,7 +29,7 @@ function getLocation(){
 function initialize(position) {
         
   myLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-
+  console.log(myLocation);
   var mapOptions = {
     center: myLocation,
     zoom: 15
