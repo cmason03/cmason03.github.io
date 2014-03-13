@@ -12,7 +12,7 @@ for( var i=1; i<numStations; i++){
 
 if(parsed[i].line == "Blue"){
 	stationLocation = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
-	createMarker(stationLocation, line, googleMap);
+	createMarker(stationLocation, "Blue", googleMap);
 }
 
 }
