@@ -129,7 +129,7 @@ function addLineMarkers(){
 function drawPolyLine(line){
 
 var trainline = [];
-for(var i=1; i<numstation; i++){
+for(var i=1; i<numStations; i++){
 	if(parsed[i].station == line){
 		trainLine.push(new google.maps.LatLng(parsed[i].lat, parsed[i].lng));
 		}
