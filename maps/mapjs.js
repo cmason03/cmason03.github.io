@@ -126,7 +126,7 @@ function addLineMarkers(){
 			}
 		}
 	}
-	var trainLine = new google.maps.Polylline({
+	var trainLine = new google.maps.Polyline({
 		path: trainPath,
 		geodesic: true,
 		strokeColor: 'red',
