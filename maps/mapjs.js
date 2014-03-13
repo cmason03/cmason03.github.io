@@ -132,7 +132,7 @@ var trainLine = [];
 for(var i=1; i<numStations; i++){
 	if(parsed[i].station == line){
 		console.log(parsed[i].lat);
-		console.log(parsed[i].lng)
+		console.log(parsed[i].lng);
 		trainLine.push(new google.maps.LatLng(parsed[i].lat, parsed[i].lng));
 		}
 		else{}
@@ -144,7 +144,7 @@ var trainPoly = new google.maps.Polyline({
 		strokeOpacity: 1.0,
 		strokeWeight: 2
 	});
-	console.log(trainLine)
+	console.log(trainLine);
 }
 
 	google.maps.event.addDomListener(window, 'load', getLocation);
