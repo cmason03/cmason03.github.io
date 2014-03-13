@@ -29,7 +29,6 @@ function getLocation(){
 function initialize(position) {
         
   myLocation = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
-  console.log(myLocation);
   var mapOptions = {
     center: myLocation,
     zoom: 15
@@ -74,12 +73,10 @@ Number.prototype.toRad = function() {
    return this * Math.PI / 180;
 }
 
-console.log(stationLocation);
 var lat2 = stationLocation.A; 
 console.log(lat2);
 var lon2 = stationLocation.k; 
-var lat1 = myLocation.A;
-console.log(lat1); 
+var lat1 = myLocation.A; 
 var lon1 = myLocation.k; 
 console.log (lon1);
 
