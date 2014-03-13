@@ -115,7 +115,7 @@ function closestStation(){
 		distancesAndStation[i] = { "distance": getDistance(myLocation, stationLocation[i]), "station": parsed[i].station };
 		distanceArray.push(getDistance(myLocation, stationLocation[i]));	
 	}
-}
+
 	
 
 	closest= Math.min.apply(Math,distanceArray);
