@@ -143,6 +143,7 @@ var trainPoly = new google.maps.Polyline({
 		strokeOpacity: 1.0,
 		strokeWeight: 2
 	});
+	trainPoly.setMap(map);
 	console.log(trainLine);
 }
 
