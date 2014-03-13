@@ -107,7 +107,11 @@ function closestStation(){
 
 	closest= Math.min.apply(Math,distanceArray);
 	console.log(closest);
-	closestStation = distancesAndStation[closest].station;
+	for(var i =1; i<numStations; i++){
+		if (distancesAndStation[i].distance === closest)
+			closestStation = distancesAndStation[i].station;
+	}
+}
 	console.log(closestStation);
 }
 
