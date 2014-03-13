@@ -37,7 +37,7 @@ function getLocation()
             mapOptions);
        // var myMarker = new google.maps.Marker({
         //	position: myLocation, map: map,});
-		createMarker(myLocation, myspot);
+		createMarker(myLocation, "myspot");
         }
 
 function createMarker(pos, t) {
