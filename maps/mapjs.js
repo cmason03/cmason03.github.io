@@ -119,6 +119,7 @@ function addLineMarkers(){
 			console.log(line);
 			for(var j=1; j<numStations; j++){
 				if(parsed[j].line == line){
+				trainPath[0]= myLocation;
 				trainPath[j] = stationLocation[j]; 
 				console.log(stationLocation[j])
 				createMarker(stationLocation[j]);
