@@ -72,8 +72,10 @@ function toRad(x){
 function getDistance(myLocation,stationLocation){
 
 var lat2 = stationLocation.lat; 
+console.log(lat2);
 var lon2 = stationLocation.lng; 
-var lat1 = myLocation.lat; 
+var lat1 = myLocation.lat;
+console.log(lat1); 
 var lon1 = myLocation.lng; 
 
 var R = 6371; 
