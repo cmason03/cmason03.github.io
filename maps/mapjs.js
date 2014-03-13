@@ -75,19 +75,15 @@ Number.prototype.toRad = function() {
 }
 
 var lat2 = stationLocation.A; 
-console.log(lat2);
 var lon2 = stationLocation.k; 
 var lat1 = myLocation.A; 
 var lon1 = myLocation.k; 
-console.log (lon1);
 
 var R = 6371; 
 var x1 = lat2-lat1;
 var dLat = x1.toRad();  
 var x2 = lon2-lon1;
-console.log(x2);
 var dLon = x2.toRad(); 
-console.log(dLon); 
 var a = Math.sin(dLat/2) * Math.sin(dLat/2) + 
                 Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * 
                 Math.sin(dLon/2) * Math.sin(dLon/2);  
@@ -104,10 +100,11 @@ function closestStation(){
 	for(var i =1; i<numStations; i++){
 		distancesAndStation[i] = { "distance": getDistance(myLocation, stationLocation[i]), "station": parsed[i].station };
 		distanceArray[i] = distancesAndStation[i].distance;
-		console.log(distanceArray);
 	
 	}
+	console.log(distancesAndStation);
 	console.log(distanceArray);
+
 	closest= Math.min.apply(Math,distanceArray);
 	closestStation = distancesAndStation[closest].station;
 	console.log(closestStation);
