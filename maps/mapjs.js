@@ -31,7 +31,7 @@ function getLocation()
 		createMarker(myLocation, "boop", map);
 		
 		for( var i=1; i<numStations; i++){
-			console.log(parsed[i].line);
+			console.log("it gets here");
 			if(parsed[i].line == "Blue"){
 				stationLocation[i] = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
 				createMarker(stationLocation[i], "Blue", map);
