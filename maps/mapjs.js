@@ -53,15 +53,20 @@ function getLocation()
         	position: myLocation, map: map,});
         }
 
-function placeMarkers(){
-	for (var i=0; i<(numStations); i++) {
-		if(parsed[i].line === "Blue"){
-		var myMarker = new google.maps.Marker({
-        position: myLocation, map: map,});
-    }
-        }
-		}
+function createMarker(pos, t) {
+    var marker = new google.maps.Marker({       
+        position: pos, 
+        map: m,  // google.maps.Map 
+        title: t      
+    }); 
+    google.maps.event.addListener(marker, 'click', function() { 
+       alert("I am marker " + marker.title); 
+    }); 
+    return marker;  
+}
      
+   
+
 
 	google.maps.event.addDomListener(window, 'load', getLocation);
 
