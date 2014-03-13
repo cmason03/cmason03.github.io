@@ -81,6 +81,7 @@ var lon2 = stationLocation.K;
 var lat1 = myLocation.A;
 console.log(lat1); 
 var lon1 = myLocation.K; 
+console.log (lon1);
 
 var R = 6371; 
 var x1 = lat2-lat1;
