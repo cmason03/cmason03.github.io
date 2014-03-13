@@ -75,12 +75,13 @@ function getDistance(myLocation,stationLocation){
 var lat2 = stationLocation.A; 
 console.log(lat2);
 var lon2 = stationLocation.K; 
-var lat1 = myLocation.lat;
+var lat1 = myLocation.A;
 console.log(lat1); 
-var lon1 = myLocation.lng; 
+var lon1 = myLocation.K; 
 
 var R = 6371; 
 var dLat = toRad(lat2-lat1);  
+console.log(dLat);
 var dLon = toRad(lon2-lon1);  
 var a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.cos(toRad(lat1)) * Math.cos(toRad(lat2)) * Math.sin(dLon/2) * Math.sin(dLon/2);  
 var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
