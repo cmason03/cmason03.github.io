@@ -63,9 +63,7 @@ function trainPins(line, googleMap){
 	}
 }
 
-function myInfoWindow(){
-	var contentString = 'You are here!' + ;
-}
+
  
 function getDistance(myLocation,stationLocation){
 
