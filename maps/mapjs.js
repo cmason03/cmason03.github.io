@@ -17,7 +17,7 @@ function parse() {
 			stationLocation[i] = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
 			
 	}
-	console.log(stationLocation);
+	console.log(stationLocation[1].A);
 }
 function getLocation(){
   if (navigator.geolocation)
