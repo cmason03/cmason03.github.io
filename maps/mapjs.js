@@ -106,7 +106,7 @@ function closestStation(){
 	console.log(distancesAndStation);
 	console.log(distanceArray);
 
-	closest= Math.min.apply(Math,distanceArray);
+	closest= Math.min(distanceArray);
 	console.log(closest);
 	closestStation = distancesAndStation[closest].station;
 	console.log(closestStation);
