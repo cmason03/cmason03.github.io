@@ -27,7 +27,7 @@ function initialize(position) {
     zoom: 15
   };
        
-  var map = new google.maps.Map(document.getElementById("map-canvas"),
+  map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
   
   createMarker(myLocation);
