@@ -153,8 +153,6 @@ function drawPolyLine(line){
 var trainLine = [];
 for(var i=1; i<numStations; i++){
 	if(parsed[i].line == line){
-		console.log(parsed[i].lat);
-		console.log(parsed[i].lng);
 		trainLine.push(new google.maps.LatLng(parsed[i].lat, parsed[i].lng));
 		}
 		else{}
@@ -167,7 +165,6 @@ var trainPoly = new google.maps.Polyline({
 		strokeWeight: 2
 	});
 	trainPoly.setMap(map);
-	console.log(trainLine);
 }
 
 	google.maps.event.addDomListener(window, 'load', getLocation);
