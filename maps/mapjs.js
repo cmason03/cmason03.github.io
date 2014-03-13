@@ -38,9 +38,8 @@ function initialize(position) {
   map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
   
-  createMarker(myLocation);
-  closestStation();
 		}
+
 
 
 function createMarker(pos) {
@@ -53,7 +52,20 @@ function createMarker(pos) {
     }); 
     return marker;  
 }
- 
+
+function addLineMarkers{
+	var closestStation = closestStation();
+	var line;
+	for( var i=1; i<numStations; i++){
+		if(parsed[i].station == closestStation){
+			line = parsed[i].line;
+			for(var j=1; j<numstations; j++){
+				createMarker(stationLocation[j]);
+			}
+		}
+	}
+
+}
 
 function trainPins(line, googleMap){
 
@@ -102,18 +114,15 @@ function closestStation(){
 		distancesAndStation[i] = { "distance": getDistance(myLocation, stationLocation[i]), "station": parsed[i].station };
 		distanceArray.push(getDistance(myLocation, stationLocation[i]));	
 	}
-	console.log(distancesAndStation);
-	console.log(distanceArray);
+	
 
 	closest= Math.min.apply(Math,distanceArray);
-	console.log(closest);
 	for(var i =1; i<numStations; i++){
 		if (distancesAndStation[i].distance === closest){
 			closestStation = distancesAndStation[i].station;
 		}
 	}
 
-	console.log(closestStation);
 }
 
 	google.maps.event.addDomListener(window, 'load', getLocation);
