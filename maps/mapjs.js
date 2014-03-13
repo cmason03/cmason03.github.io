@@ -37,6 +37,7 @@ function initialize(position) {
        
   map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
+  addLineMarkers();
   
 		}
 
@@ -55,11 +56,14 @@ function createMarker(pos) {
 
 function addLineMarkers(){
 	var closestStation = closestStation();
+	console.log(closestStation);
 	var line;
 	for( var i=1; i<numStations; i++){
 		if(parsed[i].station == closestStation){
 			line = parsed[i].line;
+			console.log(line);
 			for(var j=1; j<numstations; j++){
+				console.log(stationLocation[j])
 				createMarker(stationLocation[j]);
 			}
 		}
