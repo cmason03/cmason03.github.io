@@ -43,7 +43,7 @@ function getLocation()
 function createMarker(pos, t) {
     var marker = new google.maps.Marker({       
         position: pos, 
-        map: m,  
+        map: map,  
         title: t      
     }); 
     google.maps.event.addListener(marker, 'click', function() { 
