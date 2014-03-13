@@ -118,22 +118,25 @@ function addLineMarkers(){
 			line = parsed[i].line;
 			console.log(line);
 			for(var j=1; j<numStations; j++){
-				if(parsed[j].line == line){
-				trainPath[0]= myLocation;
-				trainPath[j] = stationLocation[j]; 
+				if(parsed[j].line == line){ 
 				console.log(stationLocation[j])
 				createMarker(stationLocation[j]);
 				}
 			}
 		}
+	for (var y=1; y<numStation; y++){
+		if(parsed[y].line == line){
+			trainPath.push(stationLocation[y])
+		}
 	}
-	/*var trainLine = new google.maps.Polyline({
+	}
+	var trainLine = new google.maps.Polyline({
 		path: trainPath,
 		geodesic: true,
 		strokeColor: 'red',
 		strokeOpacity: 1.0,
 		strokeWeight: 2
-	});*/
+	});
 }
 
 	google.maps.event.addDomListener(window, 'load', getLocation);
