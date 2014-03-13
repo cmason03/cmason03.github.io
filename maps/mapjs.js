@@ -3,7 +3,7 @@ var parsed = [];
 var map;
 var stationLocation= [];
 var myLocation;
-var distances=[];
+var distancesAndStation=[];
 
 
 
@@ -102,12 +102,13 @@ function closestStation(){
 	var closer =true;
 	var distance =0;
 	for(var i =1; i<numStations; i++){
-		distances[i] = { "distance": getDistance(myLocation, stationLocation[i]), "station": parsed[i].station };
-
+		distancesAndStation[i] = { "distance": getDistance(myLocation, stationLocation[i]), "station": parsed[i].station };
+		var distances[i] =distancesAndStation[i].distance;
 	
 	}
 	console.log(distances);
-	closestStation = Math.min.apply(Math,distances.distance);
+	closest= Math.min.apply(Math,distances);
+	closestStation = distancesAndStation[i].station;
 	console.log(closestStation);
 }
 
