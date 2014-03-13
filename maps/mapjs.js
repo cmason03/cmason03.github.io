@@ -3,6 +3,7 @@ var parsed = [];
 var map;
 var stationLocation= [];
 var myLocation;
+var distances[];
 
 
 
@@ -101,9 +102,11 @@ function closestStation(){
 	var closer =true;
 	var distance =0;
 	for(var i =1; i<numStations; i++){
-		distance = getDistance(myLocation, stationLocation[i]);
-		console.log(parsed[i].station + " is " + distance + "km away");
+		distances[i] = {getDistance(myLocation, stationLocation[i]):parsed[i].station};
+
+	
 	}
+	console.log(distances);
 }
 
 	google.maps.event.addDomListener(window, 'load', getLocation);
