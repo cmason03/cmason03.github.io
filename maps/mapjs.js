@@ -86,6 +86,7 @@ var R = 6371;
 var x1 = lat2-lat1;
 var dLat = x1.toRad();  
 var x2 = lon2-lon1;
+console.log(x2);
 var dLon = x2.toRad(); 
 console.log(dLon); 
 var a = Math.sin(dLat/2) * Math.sin(dLat/2) + 
