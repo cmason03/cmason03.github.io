@@ -137,12 +137,13 @@ for(var i=1; i<numStations; i++){
 		else{}
 		}
 	var trainPoly = new google.maps.Polyline({
-		path: trainline,
+		path: trainLine,
 		geodesic: true,
 		strokeColor: '#FF0000',
 		strokeOpacity: 1.0,
 		strokeWeight: 2
 	});
+	console.log(trainLine)
 }
 
 	google.maps.event.addDomListener(window, 'load', getLocation);
