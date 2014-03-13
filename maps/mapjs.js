@@ -29,7 +29,7 @@ function getLocation()
             mapOptions);
   
 		createMarker(myLocation, "boop", map);
-		
+		console.log("it gets to this point");
 		for( var i=1; i<numStations; i++){
 			console.log("it gets here");
 			if(parsed[i].line == "Blue"){
