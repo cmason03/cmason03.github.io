@@ -102,7 +102,7 @@ function closestStation(){
 	var closer =true;
 	var distance =0;
 	for(var i =1; i<numStations; i++){
-		distances[i] = { "distance":getDistance(myLocation, stationLocation[i]), "station": parsed[i].station };
+		distances[i] = { "distance": getDistance(myLocation, stationLocation[i]), "station": parsed[i].station };
 
 	
 	}
