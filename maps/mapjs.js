@@ -33,17 +33,17 @@ function getLocation()
           center: myLocation,
           zoom: 15
         };
-        var map = new window.google.maps.Map(document.getElementById("map-canvas"),
+        var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
        // var myMarker = new google.maps.Marker({
         //	position: myLocation, map: map,});
-		createMarker(myLocation, "myspot");
+		createMarker(myLocation, "myspot", map);
         }
 
-function createMarker(pos, t) {
+function createMarker(pos, t, googleMap) {
     var marker = new google.maps.Marker({       
         position: pos, 
-        map: map,  
+        map: googleMap,  
         title: t      
     }); 
     google.maps.event.addListener(marker, 'click', function() { 
