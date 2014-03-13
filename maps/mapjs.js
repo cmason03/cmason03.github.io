@@ -112,7 +112,7 @@ function closestStation(){
 			closestStation = distancesAndStation[i].station;
 		}
 	}
-}
+
 	console.log(closestStation);
 }
 
