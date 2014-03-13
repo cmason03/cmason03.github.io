@@ -112,7 +112,6 @@ function addLineMarkers(){
 	var station = closestStation();
 	console.log(closestStation);
 	var line;
-	var trainPath =[];
 	trainPath[0] = myLocation;
 	for( var i=1; i<numStations; i++){
 		if(parsed[i].station == station){
@@ -121,19 +120,23 @@ function addLineMarkers(){
 			for(var j=1; j<numStations; j++){
 				if(parsed[j].line == line){ 
 				createMarker(stationLocation[j]);
+				drawPolyLine(line);
 				}
 			}
 		}
 	}
-	for (var y=1; y<numStations; y++){
-		if(parsed[y].line == line){
-			trainPath.push(stationLocation[y]);
-		}
 	}
 	
-	console.log(trainPath);
-	var trainLine = new google.maps.Polyline({
-		path: stationLocation,
+function drawPolyLine(line){
+
+var trainline = [];
+for(var i=1; i<numstation; i++){
+	if(parsed[i].station == line){
+		trainLine.push(new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
+		}
+		}
+	var trainPoly = new google.maps.Polyline({
+		path: trainline,
 		geodesic: true,
 		strokeColor: '#FF0000',
 		strokeOpacity: 1.0,
