@@ -55,6 +55,33 @@ function createMarker(pos) {
 
 }
 
+
+function getDistance(myLocation,stationLocation){
+
+Number.prototype.toRad = function() {
+   return this * Math.PI / 180;
+}
+
+var lat2 = stationLocation.A; 
+var lon2 = stationLocation.k; 
+var lat1 = myLocation.A; 
+var lon1 = myLocation.k; 
+
+var R = 6371; 
+var x1 = lat2-lat1;
+var dLat = x1.toRad();  
+var x2 = lon2-lon1;
+var dLon = x2.toRad(); 
+var a = Math.sin(dLat/2) * Math.sin(dLat/2) + 
+                Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * 
+                Math.sin(dLon/2) * Math.sin(dLon/2);  
+var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
+var d = R * c * .621371; //.621371 converts km to miles
+
+
+return(d);
+}
+
 function closestStation(){
 	var distanceArray =[];
 	var closest=0;
@@ -104,31 +131,6 @@ function trainPins(line, googleMap){
 
 
  
-function getDistance(myLocation,stationLocation){
-
-Number.prototype.toRad = function() {
-   return this * Math.PI / 180;
-}
-
-var lat2 = stationLocation.A; 
-var lon2 = stationLocation.k; 
-var lat1 = myLocation.A; 
-var lon1 = myLocation.k; 
-
-var R = 6371; 
-var x1 = lat2-lat1;
-var dLat = x1.toRad();  
-var x2 = lon2-lon1;
-var dLon = x2.toRad(); 
-var a = Math.sin(dLat/2) * Math.sin(dLat/2) + 
-                Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * 
-                Math.sin(dLon/2) * Math.sin(dLon/2);  
-var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-var d = R * c * .621371; //.621371 converts km to miles
-
-
-return(d);
-}
 
 
 	google.maps.event.addDomListener(window, 'load', getLocation);
