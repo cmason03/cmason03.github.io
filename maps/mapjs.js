@@ -35,9 +35,10 @@ function getLocation()
         };
         var map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
-       // var myMarker = new google.maps.Marker({
-        //	position: myLocation, map: map,});
+  
 		createMarker(myLocation, "myspot", map);
+		trainPins("Blue", map);
+
         }
 
 function createMarker(pos, t, googleMap) {
@@ -53,13 +54,13 @@ function createMarker(pos, t, googleMap) {
 }
  
 
-function trainPins(line){
+function trainPins(line, googleMap){
 
 for( var i=1; i<numStations; i++){
 
 if(parsed[i].line == line){
-	stationLocation = new window.google.maps.LatLng(parsed[i].lat, parsed[i].lng);
-	createMarker(stationLocation, line);
+	stationLocation = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
+	createMarker(stationLocation, line, googleMap);
 }
 
 }
