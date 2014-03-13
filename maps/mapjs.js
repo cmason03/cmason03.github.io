@@ -130,6 +130,7 @@ function addLineMarkers(){
 		}
 	}
 	}
+	console.log(trainPath);
 	var trainLine = new google.maps.Polyline({
 		path: trainPath,
 		geodesic: true,
