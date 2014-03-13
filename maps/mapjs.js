@@ -112,8 +112,10 @@ function addLineMarkers(){
 			line = parsed[i].line;
 			console.log(line);
 			for(var j=1; j<numStations; j++){
+				if(parsed[j].line == line){
 				console.log(stationLocation[j])
 				createMarker(stationLocation[j]);
+				}
 			}
 		}
 	}
