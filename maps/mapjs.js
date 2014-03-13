@@ -101,7 +101,7 @@ var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
                 Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * 
                 Math.sin(dLon/2) * Math.sin(dLon/2);  
 var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-var d = R * c * .621371; //.621371 converts km to miles
+var d = R * c; //.621371 converts km to miles
 
 
 return(d);
@@ -115,6 +115,7 @@ function closestStation(){
 		distancesAndStation[i] = { "distance": getDistance(myLocation, stationLocation[i]), "station": parsed[i].station };
 		distanceArray.push(getDistance(myLocation, stationLocation[i]));	
 	}
+}
 	
 
 	closest= Math.min.apply(Math,distanceArray);
@@ -167,6 +168,7 @@ var trainPoly = new google.maps.Polyline({
 	});
 	trainPoly.setMap(map);
 }
+
 
 	google.maps.event.addDomListener(window, 'load', getLocation);
 
