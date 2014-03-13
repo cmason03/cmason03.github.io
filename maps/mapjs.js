@@ -99,7 +99,6 @@ function closestStation(){
 			closestStation = distancesAndStation[i].station;
 		}
 	}
-	console.log(closestStation);
 	return closestStation;
 
 }
@@ -111,7 +110,7 @@ function addMyMarker(){
 function addLineMarkers(){
 	var station = closestStation();
 	console.log(closestStation);
-	var line;
+	var line= "Blue";
 	for( var i=1; i<numStations; i++){
 		if(parsed[i].station == station){
 			line = parsed[i].line;
