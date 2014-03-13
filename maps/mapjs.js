@@ -102,7 +102,7 @@ function closestStation(){
 	var distance =0;
 	for(var i =1; i<numStations; i++){
 		distance = getDistance(myLocation, stationLocation[i]);
-		console.log(distance);
+		console.log(parsed[i].station + " is " + distance + "km away");
 	}
 }
 
