@@ -104,11 +104,11 @@ function closestStation(){
 }
 
 function addLineMarkers(){
-	var closestStation = closestStation();
+	var station = closestStation();
 	console.log(closestStation);
 	var line;
 	for( var i=1; i<numStations; i++){
-		if(parsed[i].station == closestStation){
+		if(parsed[i].station == station){
 			line = parsed[i].line;
 			console.log(line);
 			for(var j=1; j<numstations; j++){
