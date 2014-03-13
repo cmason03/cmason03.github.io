@@ -100,10 +100,10 @@ return(d);
 
 function closestStation(){
 	var closer =true;
-	var distances =[];
+	var distanceArray =[];
 	for(var i =1; i<numStations; i++){
 		distancesAndStation[i] = { "distance": getDistance(myLocation, stationLocation[i]), "station": parsed[i].station };
-		distances[i] = distancesAndStation[i].distance;
+		distanceArray[i] = distancesAndStation[i].distance;
 		console.log(distances);
 	
 	}
