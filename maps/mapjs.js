@@ -7,7 +7,6 @@ function parse() {
 
 parsed=JSON.parse(string);
 var numStations = Object.keys(parsed).length;
-
 }
 
 function getLocation()
@@ -31,12 +30,12 @@ function getLocation()
   
 		createMarker(myLocation, "boop", map);
 		
+		for( var i=1; i<numStations; i++){
+			if(parsed[i].line == "Blue"){
+				stationLocation[i] = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
+				createMarker(stationLocation[i], "Blue", map);
 
-if(parsed[i].line == "Blue"){
-	stationLocation[i] = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
-	createMarker(stationLocation[i], "Blue", map);
-
-
+}
         }
     }
 
