@@ -12,7 +12,7 @@ function parse() {
 	parsed=JSON.parse(string);
 	console.log(parsed);
 	numStations = Object.keys(parsed).length;
-
+	console.log(parsed[2].lat);
 	for( var i=1; i<numStations; i++){
 			stationLocation[i] = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
 			
