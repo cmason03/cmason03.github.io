@@ -81,6 +81,7 @@ function createMarker(pos, station) {
         icon: iconImage     
     }); 
     google.maps.event.addListener(marker, 'click', function(){
+    	var station = "porter";
     	/*predictionsArray= [];
 		for(var i =0; i<scheduleData.schedule.length;i++){
 		if(marker.position ==)
