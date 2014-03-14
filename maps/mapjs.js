@@ -81,6 +81,7 @@ function getScheduleData(station){
 		}
 		
 	}
+
 console.log(predictionsArray);
 }
 
@@ -151,7 +152,7 @@ function addMyMarker(){
 function addLineMarkers(){
 	console.log("add line markers ran");
 	for( var i=1; i<numStations; i++){
-		if(parsed[i].line == line){
+		if(parsed[i].line.toLowerCase() == line){
 				console.log("if statement met");
 				createMarker(stationLocation[i]);
 				drawPolyLine(line);
