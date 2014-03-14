@@ -7,6 +7,7 @@ var distancesAndStation=[];
 var scheduleData = [];
 var line;
 var predictionsArray = [];
+var markerArray =[];
 
 
 
@@ -73,27 +74,24 @@ function initialize(position) {
 
 
 
-function createMarker(pos, station) {
+function createMarker(pos) {
     var iconImage = 'markerIcon.png';
     var marker = new google.maps.Marker({       
         position: pos, 
         map: map,
         icon: iconImage     
-    }); 
-    google.maps.event.addListener(marker, 'click', function(){
-    	var station = "porter";
-    	/*predictionsArray= [];
-		for(var i =0; i<scheduleData.schedule.length;i++){
-		if(marker.position ==)
-		if(scheduleData.schedule[i] == ){
-			for(var j=0; j< scheduleData.schedule[i].Predictions.length;j++){
-				console.log("this works");
-				predictionsArray.push(scheduleData.schedule[i].Predictions);
-			*/
-			stationInfoWindow = new google.maps.InfoWindow({content: "<h2>" + station + "</h2>"});
-			stationInfoWindow.open(map,marker); 
-    return marker;  
+    });}
 
+    function createInfoWindow(station) 
+
+    	var content = [];
+		for(var i =0; i<scheduleData.schedule.length;i++){
+			if(scheduleData.schedule[i].Destination == station){
+				console.log(scheduleData.schedule[i]);
+				content = scheduleData.schedule[i].Predictions;
+			
+			stationInfoWindow = new google.maps.InfoWindow({content: "<p>" + station + "</p>" + "<p>" + content + "</p>"});
+	
 });}
 
 
@@ -149,14 +147,20 @@ function addMyMarker(){
 }
 
 function addLineMarkers(){
+	
 	for( var i=1; i<numStations; i++){
 		if(parsed[i].line.toLowerCase() == line){
-				createMarker(stationLocation[i], parsed[i].station);
-				
+				var obj = {marker: createMarker(stationLocation[i]),
+				stationInfoWindow: createInfoWindow(parsed[i].station)
 				}
-		}
+		google.maps.event.addListener(marker[i], 'click', function(){
+			stationInfoWindow[i].open(map,marker[i]); 
+		});
+}
+		
 		drawPolyLine(line);
-		}
+}
+		
 		
 
 	
