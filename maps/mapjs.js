@@ -93,7 +93,7 @@ return marker}
 				content = scheduleData.schedule[i].Predictions;
 				console.log(content);
 			
-			stationInfoWindow = new google.maps.InfoWindow({content: "<p>" + station + "</p>" + "<p>" + content + "</p>"});
+			var stationInfoWindow = new google.maps.InfoWindow({content: "<p>" + station + "</p>" + "<p>" + content + "</p>"});
 			
 }}
 return stationInfoWindow;}
