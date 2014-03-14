@@ -83,6 +83,7 @@ function getScheduleData(station){
 	}
 console.log(predictionsArray);
 }
+
 function createMarker(pos) {
     var marker = new google.maps.Marker({       
         position: pos, 
