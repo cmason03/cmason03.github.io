@@ -82,7 +82,7 @@ function createMarker(pos) {
         icon: iconImage     
     });}
 
-    function createInfoWindow(station) 
+    function createInfoWindow(station) {
 
     	var content = [];
 		for(var i =0; i<scheduleData.schedule.length;i++){
@@ -92,7 +92,7 @@ function createMarker(pos) {
 			
 			stationInfoWindow = new google.maps.InfoWindow({content: "<p>" + station + "</p>" + "<p>" + content + "</p>"});
 	
-});}
+}}}
 
 
 function getDistance(myLocation,stationLocation){
