@@ -90,7 +90,7 @@ function createMarker(pos, station) {
 				console.log("this works");
 				predictionsArray.push(scheduleData.schedule[i].Predictions);
 			*/
-			stationInfoWindow = new google.maps.infoWindow({content: "<h2>" + station + "</h2>"});
+			stationInfoWindow = new google.maps.InfoWindow({content: "<h2>" + station + "</h2>"});
 			stationInfoWindow.open(map,marker); 
     return marker;  
 
