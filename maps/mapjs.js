@@ -6,6 +6,7 @@ var myLocation;
 var distancesAndStation=[];
 var scheduleData = [];
 var line;
+var predictionsArray = [];
 
 
 
@@ -71,13 +72,14 @@ function initialize(position) {
 
 
 function getScheduleData(station){
-	var predictionsArray= [];
+	predictionsArray= [];
 	for(var i =0; i<scheduleData.schedule.length;i++){
 		if(scheduleData.schedule[i].Destination ==station){
 			for(var j=0; j< schedulaData.schedule.Prediction.length;j++){
 				console.log("this works");
 				predictionsArray.push(scheduleData.schedule.Prediction[j]);
 			}
+			createInfoWindow(predictionsArray);
 		}
 		
 	}
@@ -90,11 +92,16 @@ function createMarker(pos) {
         position: pos, 
         map: map     
     }); 
-    google.maps.event.addListener(marker, 'click', function() { 
-       alert("I am marker " + marker.title); 
+    google.maps.event.addListener(marker, 'click', getScheduleData(); 
     }); 
     return marker;  
 
+}
+
+function createInfoWindow(station){
+
+	stationInfoWindow = new google.maps.infoWindow({content: "<h2>" predictionsArray "</h2>"});
+	stationInfoWindow.open(map,marker);
 }
 
 
@@ -118,7 +125,7 @@ var a = Math.sin(dLat/2) * Math.sin(dLat/2) +
                 Math.cos(lat1.toRad()) * Math.cos(lat2.toRad()) * 
                 Math.sin(dLon/2) * Math.sin(dLon/2);  
 var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); 
-var d = R * c; //.621371 converts km to miles
+var d = R * c; 
 
 
 return(d);
