@@ -36,9 +36,9 @@ function dataReady() {
         {
                 alert("BADDDD, 500 status");
         }
+getLocation();
 
-
-}	}
+}	
 
 
 
