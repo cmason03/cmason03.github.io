@@ -153,8 +153,8 @@ function addLineMarkers(){
 				var obj = {marker: createMarker(stationLocation[i]),
 				stationInfoWindow: createInfoWindow(parsed[i].station)
 				}
-		google.maps.event.addListener(marker[i], 'click', function(){
-			stationInfoWindow[i].open(map,marker[i]); 
+		google.maps.event.addListener(obj.marker[i], 'click', function(){
+			stationInfoWindow[i].open(map,obj.marker[i]); 
 		});
 }
 		
