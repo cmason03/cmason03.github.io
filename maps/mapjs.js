@@ -159,7 +159,7 @@ function addLineMarkers(){
 }
 		
 		drawPolyLine(line);
-}
+}}
 		
 		
 
