@@ -73,15 +73,18 @@ function initialize(position) {
 
 
 
-function createMarker(pos) {
+function createMarker(pos, station) {
+    var iconImage = 'markerIcon.jpeg';
     var marker = new google.maps.Marker({       
         position: pos, 
-        map: map     
+        map: map,
+        icon: iconImage     
     }); 
     google.maps.event.addListener(marker, 'click', function(){
     	predictionsArray= [];
 		for(var i =0; i<scheduleData.schedule.length;i++){
-		if(scheduleData.schedule[i] ==station){
+		if(marker.position ==)
+		if(scheduleData.schedule[i] == ){
 			for(var j=0; j< scheduleData.schedule[i].Predictions.length;j++){
 				console.log("this works");
 				predictionsArray.push(scheduleData.schedule[i].Predictions);
@@ -144,13 +147,13 @@ function closestStation(){
 }
 
 function addMyMarker(){
-	createMarker(myLocation);
+	//createMarker(myLocation);
 }
 
 function addLineMarkers(){
 	for( var i=1; i<numStations; i++){
 		if(parsed[i].line.toLowerCase() == line){
-				createMarker(stationLocation[i]);
+				createMarker(stationLocation[i], parsed[i].station);
 				
 				}
 		}
