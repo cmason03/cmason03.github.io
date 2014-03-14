@@ -74,7 +74,7 @@ function initialize(position) {
 
 
 function createMarker(pos, station) {
-    var iconImage = 'markerIcon.jpeg';
+    var iconImage = 'markerIcon.png';
     var marker = new google.maps.Marker({       
         position: pos, 
         map: map,
