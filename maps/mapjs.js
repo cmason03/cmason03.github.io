@@ -81,7 +81,7 @@ function createMarker(pos, station) {
         icon: iconImage     
     }); 
     google.maps.event.addListener(marker, 'click', function(){
-    	predictionsArray= [];
+    	/*predictionsArray= [];
 		for(var i =0; i<scheduleData.schedule.length;i++){
 		if(marker.position ==)
 		if(scheduleData.schedule[i] == ){
@@ -94,9 +94,9 @@ function createMarker(pos, station) {
 		}
 		
 	}}); 
-    return marker;  
+    return marker;  */
 
-}
+});}
 
 
 function getDistance(myLocation,stationLocation){
