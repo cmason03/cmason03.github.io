@@ -93,7 +93,6 @@ function createMarker(pos) {
         map: map     
     }); 
     google.maps.event.addListener(marker, 'click', getScheduleData(); 
-    }); 
     return marker;  
 
 }
