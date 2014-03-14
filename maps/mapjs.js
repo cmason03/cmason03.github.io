@@ -79,8 +79,10 @@ function createMarker(pos) {
     var marker = new google.maps.Marker({       
         position: pos, 
         map: map,
-        icon: iconImage     
-    });}
+        icon: iconImage    
+
+    });
+return marker}
 
     function createInfoWindow(station) {
 
@@ -91,8 +93,9 @@ function createMarker(pos) {
 				content = scheduleData.schedule[i].Predictions;
 			
 			stationInfoWindow = new google.maps.InfoWindow({content: "<p>" + station + "</p>" + "<p>" + content + "</p>"});
-	
-}}}
+			
+}}
+return stationInfoWindow;}
 
 
 function getDistance(myLocation,stationLocation){
