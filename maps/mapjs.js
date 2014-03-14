@@ -71,35 +71,28 @@ function initialize(position) {
 		}
 
 
-function getScheduleData(station){
-	predictionsArray= [];
-	for(var i =0; i<scheduleData.schedule.length;i++){
-		if(scheduleData.schedule[i] ==station){
-			for(var j=0; j< scheduleData.schedule[i].Predictions.length;j++){
-				console.log("this works");
-				predictionsArray.push(scheduleData.schedule[i].Predictions);
-			}
-			//createInfoWindow(predictionsArray);
-		}
-		
-	}
 
-}
 
 function createMarker(pos) {
     var marker = new google.maps.Marker({       
         position: pos, 
         map: map     
     }); 
-    google.maps.event.addListener(marker, 'click', getScheduleData()); 
+    google.maps.event.addListener(marker, 'click', function(){
+    	predictionsArray= [];
+		for(var i =0; i<scheduleData.schedule.length;i++){
+		if(scheduleData.schedule[i] ==station){
+			for(var j=0; j< scheduleData.schedule[i].Predictions.length;j++){
+				console.log("this works");
+				predictionsArray.push(scheduleData.schedule[i].Predictions);
+			}
+			stationInfoWindow = new google.maps.infoWindow({content: "<h2>" + predictionsArray + "</h2>"});
+			stationInfoWindow.open(map,marker);
+		}
+		
+	}}); 
     return marker;  
 
-}
-
-function createInfoWindow(station){
-
-	stationInfoWindow = new google.maps.infoWindow({content: "<h2>" + predictionsArray + "</h2>"});
-	stationInfoWindow.open(map,marker);
 }
 
 
