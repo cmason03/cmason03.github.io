@@ -88,13 +88,10 @@ function createMarker(pos, station) {
 			for(var j=0; j< scheduleData.schedule[i].Predictions.length;j++){
 				console.log("this works");
 				predictionsArray.push(scheduleData.schedule[i].Predictions);
-			}
-			stationInfoWindow = new google.maps.infoWindow({content: "<h2>" + predictionsArray + "</h2>"});
-			stationInfoWindow.open(map,marker);
-		}
-		
-	}}); 
-    return marker;  */
+			*/
+			stationInfoWindow = new google.maps.infoWindow({content: "<h2>" + station + "</h2>"});
+			stationInfoWindow.open(map,marker); 
+    return marker;  
 
 });}
 
