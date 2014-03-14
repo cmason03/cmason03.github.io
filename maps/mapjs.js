@@ -19,11 +19,13 @@ function parse() {
 	
 	for( var i=1; i<numStations; i++){
 			stationLocation[i] = new google.maps.LatLng(parsed[i].lat, parsed[i].lng);
-			
+		}
 	request = new XMLHttpRequest();
     request.open("get", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
     request.onreadystatechange = dataReady;
     request.send(null);
+}
+
 
 function dataReady() {
 
@@ -42,7 +44,7 @@ getLocation();
 
 
 
-}
+
 function getLocation(){
   if (navigator.geolocation)
     {
