@@ -99,7 +99,7 @@ function createMarker(pos) {
 
 function createInfoWindow(station){
 
-	stationInfoWindow = new google.maps.infoWindow({content: "<h2>" predictionsArray "</h2>"});
+	stationInfoWindow = new google.maps.infoWindow({content: "<h2>" + predictionsArray + "</h2>"});
 	stationInfoWindow.open(map,marker);
 }
 
