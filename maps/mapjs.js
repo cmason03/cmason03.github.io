@@ -155,9 +155,10 @@ function addLineMarkers(){
 		if(parsed[i].line.toLowerCase() == line){
 				console.log("if statement met");
 				createMarker(stationLocation[i]);
-				drawPolyLine(line);
+				
 				}
 		}
+		drawPolyLine(line);
 		}
 		
 
