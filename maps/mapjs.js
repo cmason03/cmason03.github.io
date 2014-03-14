@@ -92,7 +92,7 @@ function createMarker(pos) {
         position: pos, 
         map: map     
     }); 
-    google.maps.event.addListener(marker, 'click', getScheduleData(); 
+    google.maps.event.addListener(marker, 'click', getScheduleData()); 
     return marker;  
 
 }
