@@ -70,7 +70,7 @@ function initialize(position) {
 
 function getScheduleData(station){
 	var predictionsArray= [];
-	for(var i =0; i<scheuleData.schedule.length;i++){
+	for(var i =0; i<scheduleData.schedule.length;i++){
 		line = scheduleData.line;
 		if(scheduleData.schedule[i]==station){
 			for(var j=0; j< schedulaData.schedule.Prediction.length;j++){
