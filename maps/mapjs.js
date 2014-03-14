@@ -79,7 +79,7 @@ function getScheduleData(station){
 				console.log("this works");
 				predictionsArray.push(scheduleData.schedule[i].Predictions);
 			}
-			createInfoWindow(predictionsArray);
+			//createInfoWindow(predictionsArray);
 		}
 		
 	}
