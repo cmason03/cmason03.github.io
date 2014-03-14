@@ -151,11 +151,11 @@ function addLineMarkers(){
 				createMarker(stationLocation[i]);
 				drawPolyLine(line);
 				}
-			}
+			else{}
 		}
-		else{}
-	}
-	}
+		}
+		
+
 	
 function drawPolyLine(line){
 
