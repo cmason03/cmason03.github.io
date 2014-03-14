@@ -29,7 +29,7 @@ function dataReady() {
 
         if(request.readyState ==4 && request.status == 200) {
                 scheduleData =JSON.parse(request.responseText);
-
+                line =scheduleData.line;
                 console.log('worked');
 
         }
@@ -71,8 +71,7 @@ function initialize(position) {
 function getScheduleData(station){
 	var predictionsArray= [];
 	for(var i =0; i<scheduleData.schedule.length;i++){
-		line = scheduleData.line;
-		if(scheduleData.schedule[i]==station){
+		if(scheduleData.schedule[i].Destination ==station){
 			for(var j=0; j< schedulaData.schedule.Prediction.length;j++){
 				console.log("this works");
 				predictionsArray.push(scheduleData.schedule.Prediction[j]);
@@ -147,15 +146,9 @@ function addMyMarker(){
 }
 
 function addLineMarkers(){
-	var station = closestStation();
-	var line= "Blue";
 	for( var i=1; i<numStations; i++){
-		if(parsed[i].station == station){
-			line = parsed[i].line;
-			console.log(line);
-			for(var j=1; j<numStations; j++){
-				if(parsed[j].line == line){ 
-				createMarker(stationLocation[j]);
+		if(parsed[i].line == line){
+				createMarker(stationLocation[i]);
 				drawPolyLine(line);
 				}
 			}
