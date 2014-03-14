@@ -30,7 +30,6 @@ function dataReady() {
         if(request.readyState ==4 && request.status == 200) {
                 scheduleData =JSON.parse(request.responseText);
                 line =scheduleData.line;
-                console.log('worked');
 
         }
         else if (request.readyState ==2 && request.status == 500)
@@ -151,7 +150,6 @@ function addLineMarkers(){
 				createMarker(stationLocation[i]);
 				drawPolyLine(line);
 				}
-			else{}
 		}
 		}
 		
