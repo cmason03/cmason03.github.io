@@ -5,6 +5,7 @@ var stationLocation= [];
 var myLocation;
 var distancesAndStation=[];
 var scheduleData = [];
+var line;
 
 
 
@@ -67,7 +68,20 @@ function initialize(position) {
 		}
 
 
-
+function getScheduleData(station){
+	var predictionsArray= [];
+	for(var i =0; i<scheuleData.schedule.length){
+		line = scheduleData.line;
+		if(scheduleData.schedule[i]==station){
+			for(var j=0; j< schedulaData.schedule.Prediction.length){
+				console.log(this works)
+				predictionsArray.push(scheduleData.schedule.Prediction[j]);
+			}
+		}
+		
+	}
+console.log(predictionsArray);
+}
 function createMarker(pos) {
     var marker = new google.maps.Marker({       
         position: pos, 
