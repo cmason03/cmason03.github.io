@@ -77,7 +77,7 @@ function getScheduleData(station){
 		if(scheduleData.schedule[i] ==station){
 			for(var j=0; j< scheduleData.schedule[i].Predictions.length;j++){
 				console.log("this works");
-				predictionsArray.push(scheduleData.schedule[i].Predictions[j]);
+				predictionsArray.push(scheduleData.schedule[i].Predictions);
 			}
 			createInfoWindow(predictionsArray);
 		}
