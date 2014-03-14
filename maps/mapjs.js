@@ -152,7 +152,7 @@ function addLineMarkers(){
 		if(parsed[i].line.toLowerCase() == line){
 				var obj = {marker: createMarker(stationLocation[i]),
 				stationInfoWindow: createInfoWindow(parsed[i].station)
-				}
+				};
 		google.maps.event.addListener(obj.marker[i], 'click', function(){
 			stationInfoWindow[i].open(map,obj.marker[i]); 
 		});
