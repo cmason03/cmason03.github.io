@@ -87,7 +87,7 @@ function createMarker(pos) {
     	var content = [];
 		for(var i =0; i<scheduleData.schedule.length;i++){
 			if(scheduleData.schedule[i].Destination == station){
-				console.log(scheduleData.schedule[i]);
+				console.log(scheduleData.schedule[i].Destination);
 				content = scheduleData.schedule[i].Predictions;
 			
 			stationInfoWindow = new google.maps.InfoWindow({content: "<p>" + station + "</p>" + "<p>" + content + "</p>"});
