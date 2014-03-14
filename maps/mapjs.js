@@ -84,7 +84,6 @@ function getScheduleData(station){
 		
 	}
 
-console.log(predictionsArray);
 }
 
 function createMarker(pos) {
