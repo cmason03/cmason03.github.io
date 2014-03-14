@@ -91,6 +91,7 @@ return marker}
 			if(scheduleData.schedule[i].Destination == station){
 				console.log(scheduleData.schedule[i].Destination);
 				content = scheduleData.schedule[i].Predictions;
+				console.log(content);
 			
 			stationInfoWindow = new google.maps.InfoWindow({content: "<p>" + station + "</p>" + "<p>" + content + "</p>"});
 			
