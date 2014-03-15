@@ -7,6 +7,7 @@ var distancesAndStation=[];
 var scheduleData = [];
 var line;
 var markerAndInfoWindow =[];
+var windowContent= [];
 
 
 
@@ -176,7 +177,7 @@ function addLineMarkers() {
 
 
 	
-	var windowContent= [];
+	
 	for(var i=0; i<numStations;i++){
 		if(parsed[i].line.toLowerCase() == line){
 			createMarker(stationLocation[i]);
