@@ -171,13 +171,18 @@ function addMyMarker(){
     infowindow.open(map,marker);
   });}
 
-function addMarker(windowInfo){
+function addMarker(windowInfo, position){
+
+	var marker = createMarker(position);
 	var content = "<p>" + windowInfo[0][1] + "</p>";
 	for (var i =0; i< windowInfo.length;i++){
 		content+= "<p> Destination: " + windowInfo[i][1] + " Seconds: " + windowInfo[i][2] + "</p>";
 
 	}
-	console.log(content);}
+	var infowindow = new google.maps.InfoWindow({content:content});
+	google.maps.event.addListener(marker, "click",function(){InfoWindow.open(map,marker);});
+	return marker;
+}
 /*
 	var contentString = "You are " + getDistance(myLocation, closestToMe[1]) + " km from " + closestToMe[0];
 	console.log(contentString);
@@ -229,7 +234,7 @@ function addLineMarkers() {
 			for(var j =0; j<markerAndInfoWindow.length;j++){
 				
 				if(markerAndInfoWindow[j].station == parsed[i].station){
-					
+					var position = stationLocation[i];
 					windowContent.push([parsed[i].station, markerAndInfoWindow[j].direction, markerAndInfoWindow[j].schedule]);
 
 				}
@@ -240,7 +245,7 @@ function addLineMarkers() {
 
 		}
 
-addMarker(windowContent);
+addMarker(windowContent,position);
 
 
 drawPolyLine();
