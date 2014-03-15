@@ -169,7 +169,7 @@ function addMyMarker(){
   });
   google.maps.event.addListener(window, 'load', function() {
     infowindow.open(map,marker);
-  });
+  });}
 
 function addMarker(windowInfo){
 	var content = "<p>" + windowInfo[0][1] + "</p>";
