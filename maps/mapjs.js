@@ -172,7 +172,28 @@ function addLineMarkers() {
 
 
 						markerAndInfoWindow.push({station:goodStationObject.station, schedule:arrivalTime, direction:trainDestination});
-					}}}}}}
+					}}}}}
+
+
+	
+	var windowContent= [];
+	for(var i=0; i<numstations;i++){
+		if(parsed[i].line.toLowerCase() == line){
+			createMarker(stationLocation[i]);
+			for(var j =0; j<markerAndInfoWindow.length;j++){
+				if(markerAndInfoWindow.station == parsed[i].station){
+					windowContent.push([markerAndInfoWindow[j].direction, markerAndInfoWindow[j].schedule])
+				}
+	}
+
+
+
+			}
+
+		}
+console.log(windowContent);
+	}
+				
 
 
 	
