@@ -152,7 +152,6 @@ function addMyMarker(){
 
 function addMarker(windowInfo, pos){
 	var image = 'markerIcon.png';
-	
 	var stationMarker;
 	stationMarker = new google.maps.Marker({
     position: pos,
