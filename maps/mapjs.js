@@ -26,7 +26,6 @@ function parse() {
     request.send(null);
     
     getLocation();
-    console.log("dataReadyCount");
 }
 
 
@@ -35,7 +34,6 @@ function dataReady() {
         if(request.readyState ==4 && request.status == 200) {
                 scheduleData =JSON.parse(request.responseText);
                 line =scheduleData.line;
-                console.log("getLocationCount");
   				addLineMarkers();
 
         }
@@ -163,10 +161,12 @@ function addLineMarkers() {
 	for(var i =1; i<numStations; i++){
 		if(parsed[i].line.toLowerCase() == line){
 			goodStationObject = parsed[i];
+			console.log(goodStationObject);
 			goodStationArray.push(goodStationObject);
 			for(var j =0; j<scheduleData.schedule.length;j++){
 				if(scheduleData.schedule[j].Destination == goodStationObject.Station){
 					predictions = scheduleData.schedule[j].Predictions;
+					console.log(predictions);
 					predictionsArray.push(predictions);
 					markerAndInfoWindow[i] = {station:goodStationObject, schedule:predictions};
 					}
