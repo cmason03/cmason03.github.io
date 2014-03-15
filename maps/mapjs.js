@@ -170,6 +170,8 @@ function addLineMarkers() {
 						console.log(arrivalTime);
 						console.log(goodStationObject.station);
 						console.log(trainDestination);
+
+
 						markerAndInfoWindow.push = {station:goodStationObject.station, schedule:arrivalTime, direction:trainDestination};
 					}
 				}
