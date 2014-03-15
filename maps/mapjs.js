@@ -158,8 +158,8 @@ function addLineMarkers() {
 			goodStationArray[i] = parsed[i];
 			for(var j =0; j<scheduleData.schedule.length;j++){
 				if(scheduleData.schedule[j].Destination == goodStationObject){
-					predictions = scheduleData.schedule[j].Predictions;
-					markerAndInfoWindow[i] = {station:goodStationObject, schedule:predictions};
+					predictions[j] = scheduleData.schedule[j].Predictions;
+					markerAndInfoWindow[i] = {station:goodStationArray[i], schedule:predictions[j]};
 					}
 			}
 }
