@@ -193,7 +193,7 @@ function addMarker(windowInfo, pos){
 
 	}
 	var infowindow = new google.maps.InfoWindow({content:content});
-	google.maps.event.addListener(stationMarker, "click",function(){InfoWindow.open(map,marker);});
+	google.maps.event.addListener(stationMarker, "click",function(){infowindow.open(map,marker);});
 	return stationMarker;
 	console.log("it gets here");
 	
