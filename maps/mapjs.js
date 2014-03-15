@@ -146,15 +146,16 @@ function closestStation(){
 	for(var i =1; i<numStations; i++){
 		if (distancesAndStation[i].distance === closest){
 			closestStation = distancesAndStation[i].station;
+			closestStationLocation= stationLocation[i];
 		}
 	}
-	return closestStation;
+	return [closestStation, closestStationLocation];
 
 }
 
 function addMyMarker(){
 	var closestToMe = closestStation();
-	var contentString = "You are " + getDistance(myLocation, closestToMe) + " from " + closestToMe();
+	var contentString = "You are " + getDistance(myLocation, closestToMe[1]) + " from " + closestToMe[0];
 	console.log(contentString);
 
 
