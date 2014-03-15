@@ -38,7 +38,7 @@ function dataReady() {
         if(request.readyState ==4 && request.status == 200) {
                 scheduleData =JSON.parse(request.responseText);
                 line =scheduleData.line;
-                addMyMarker();
+                
   				addLineMarkers();
 
         }
@@ -73,7 +73,7 @@ function initialize(position) {
   map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
   
-  //addMyMarker();
+  addMyMarker();
   
 		}
 
@@ -156,8 +156,8 @@ function closestStation(){
 }
 
 function addMyMarker(){
-	//var closestToMe = closestStation();
-	//var contentString = "You are " + getDistance(myLocation, closestToMe[1]) + " from " + closestToMe[0];
+	var closestToMe = closestStation();
+	var contentString = "You are " + getDistance(myLocation, closestToMe[1]) + " from " + closestToMe[0];
 
 
 }
