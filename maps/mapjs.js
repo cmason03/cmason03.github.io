@@ -168,7 +168,7 @@ function addLineMarkers() {
 					predictions = scheduleData.schedule[j].Predictions;
 					console.log(predictions);
 					predictionsArray.push(predictions);
-					markerAndInfoWindow[i] = {station:goodStationObject, schedule:predictions};
+					markerAndInfoWindow.push = {station:goodStationObject, schedule:predictions};
 					}
 			}
 }
