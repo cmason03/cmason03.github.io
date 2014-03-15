@@ -180,7 +180,7 @@ function addMarker(windowInfo, pos){
 });
 
 
-
+	return stationMarker;
 	stationMarker.setMap(map);
 	console.log("does it get to 184?");
 	
