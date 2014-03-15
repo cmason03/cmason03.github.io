@@ -158,7 +158,7 @@ function addMarker(windowInfo, pos){
     position: pos,
     title:"Hello World!",
     map: map,
-    icon = image;
+    icon: image;
 });
 	
 
