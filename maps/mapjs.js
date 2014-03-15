@@ -177,7 +177,7 @@ function addMarker(windowInfo){
 		content+= "<p> Destination: " + windowInfo[i][1] + " Seconds: " + windowInfo[i][2] + "</p>";
 
 	}
-	console.log(content);
+	console.log(content);}
 /*
 	var contentString = "You are " + getDistance(myLocation, closestToMe[1]) + " km from " + closestToMe[0];
 	console.log(contentString);
