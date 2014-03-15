@@ -242,10 +242,10 @@ function addLineMarkers() {
 
 			}
 
-		}
-
 addMarker(windowContent,position);
 drawPolyLine();
+		}
+
 
 	}
 				
