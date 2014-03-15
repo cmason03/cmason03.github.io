@@ -188,7 +188,7 @@ function addLineMarkers() {
 	
 	for(var i=0; i<numStations;i++){
 		if(parsed[i].line.toLowerCase() == line){
-			newPoint= stationLocation.[i];
+			newPoint= stationLocation[i];
 			var windowContent = [];
 			for(var j =0; j<markerAndInfoWindow.length;j++){
 				
