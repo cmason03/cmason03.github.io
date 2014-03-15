@@ -160,7 +160,7 @@ function addMarker(windowInfo, pos){
 	
 	stationMarker.setMap(map);
 	
-	var content = "<p>" + Here is a station! + "</p>";
+	var content = "<p>" + "Here is a station!" + "</p>";
 	for (var i =0; i< windowInfo.length;i++){
 
 		content+= "<p> Destination: " + windowInfo[i][1] + " Seconds: " + windowInfo[i][2] + "</p>";
