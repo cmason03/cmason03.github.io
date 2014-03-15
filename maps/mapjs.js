@@ -180,6 +180,7 @@ function addMarker(windowInfo, pos){
     title:"Hello World!",
     map:map
 });
+	console.log(stationMarker);
 
 
 	
