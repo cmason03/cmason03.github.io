@@ -175,19 +175,6 @@ function addLineMarkers() {
 					}}}}}}
 
 
-function addLineMarkers(){
-	
-	for( var i=1; i<numStations; i++){
-		if(parsed[i].line.toLowerCase() == line){
-				
-
-		google.maps.event.addListener(obj.marker[i], 'click', function(){
-			stationInfoWindow[i].open(map,obj.marker[i]); 
-		});
-}
-		
-		drawPolyLine(line);
-}}
 	
 		
 
