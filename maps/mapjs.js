@@ -154,17 +154,17 @@ function addMyMarker(){
 function addLineMarkers() {
 	var goodStationArray =[];
 	markerAndInfoWindow =[];
-	var predictions = [];
 	var predictionsArray= [];
 
 	for(var i =1; i<numStations; i++){
 		if(parsed[i].line.toLowerCase() == line){
-			var goodStationObect=null;
+			var goodStationObect=0;
 			goodStationObject = parsed[i];
 			console.log(goodStationObject);
 			goodStationArray.push(goodStationObject);
 			for(var j =0; j<scheduleData.schedule.length;j++){
 				if(scheduleData.schedule[j].Destination == goodStationObject.station){
+					var predictions = [];
 					predictions = scheduleData.schedule[j].Predictions;
 					console.log(predictions);
 					predictionsArray.push(predictions);
