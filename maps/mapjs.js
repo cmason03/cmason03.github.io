@@ -188,11 +188,11 @@ function addMarker(windowInfo, pos){
 	stationMarker.setMap(map);
 	console.log("does it get to 184?");
 	
-	var content = "<p>" + windowInfo[0][1] + "</p>";
-	for (var i =0; i< windowInfo.length;i++){
-		content+= "<p> Destination: " + windowInfo[i][1] + " Seconds: " + windowInfo[i][2] + "</p>";
+	//var content = "<p>" + windowInfo[0][1] + "</p>";
+	//for (var i =0; i< windowInfo.length;i++){
+	//	content+= "<p> Destination: " + windowInfo[i][1] + " Seconds: " + windowInfo[i][2] + "</p>";
 
-	}
+	//}
 	var infowindow = new google.maps.InfoWindow({content:content});
 	google.maps.event.addListener(stationMarker, "click",function(){infowindow.open(map,stationMarker);});
 	return stationMarker;
