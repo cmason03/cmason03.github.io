@@ -152,8 +152,7 @@ function closestStation(){
 		}
 	}
 	return [closestStation, closestStationLocation];
-	console.log([closestStation, closestStationLocation]);
-
+	
 }
 
 function addMyMarker(){
@@ -174,7 +173,7 @@ function addMyMarker(){
 
 
 function addMarker(windowInfo, pos){
-	console.log(pos);
+	
 	console.log(windowInfo);
 	var stationMarker;
 	stationMarker = new google.maps.Marker({
@@ -182,7 +181,7 @@ function addMarker(windowInfo, pos){
     title:"Hello World!",
     map: map
 });
-	console.log(stationMarker);
+	
 
 
 	
@@ -196,14 +195,14 @@ function addMarker(windowInfo, pos){
 	var infowindow = new google.maps.InfoWindow({content:content});
 	google.maps.event.addListener(stationMarker, "click",function(){infowindow.open(map,stationMarker);});
 	return stationMarker;
-	console.log("it gets here");
+	
 	
 }
 
 
 
 function addLineMarkers() {
-	console.log("addLineMarkers called");
+
 	var goodStationArray =[];
 	var newPoint;
 	
@@ -239,7 +238,7 @@ function addLineMarkers() {
 					windowContent.push([parsed[i].station, markerAndInfoWindow[j].direction, markerAndInfoWindow[j].schedule]);
 				}
 	}
-console.log(windowContent);
+
 addMarker(windowContent,position);
 drawPolyLine(line);
 
