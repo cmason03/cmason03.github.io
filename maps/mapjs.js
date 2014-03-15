@@ -149,17 +149,21 @@ function addMyMarker(){
 }
 
 function addLineMarkers() {
-	var goodStationArray = [];
+	var goodStationObject;
+	var goodStationArray =[];
 	markerAndInfoWindow =[];
 	var predictions = [];
+	var predictionsArray= [];
 
 	for(var i =1; i<numStations; i++){
 		if(parsed[i].line.toLowerCase() == line){
-			goodStationArray[i] = parsed[i];
+			goodStationObject = parsed[i];
+			goodStationArray.push(goodStationObject);
 			for(var j =0; j<scheduleData.schedule.length;j++){
-				if(scheduleData.schedule[j].Destination == goodStationArray){
-					predictions[j] = scheduleData.schedule[j].Predictions;
-					markerAndInfoWindow[i] = {station:goodStationArray[i], schedule:predictions[j]};
+				if(scheduleData.schedule[j].Destination == goodStationObject.Station){
+					predictions = scheduleData.schedule[j].Predictions;
+					predictionsArray.push(predictions);
+					markerAndInfoWindow[i] = {station:goodStationObject, schedule:predictions};
 					}
 			}
 }
