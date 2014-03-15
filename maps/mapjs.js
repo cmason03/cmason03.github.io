@@ -182,7 +182,7 @@ function addLineMarkers() {
 			createMarker(stationLocation[i]);
 			for(var j =0; j<markerAndInfoWindow.length;j++){
 				if(markerAndInfoWindow[j].station == parsed[i].station){
-					windowContent.push([markerAndInfoWindow[j].direction, markerAndInfoWindow[j].schedule])
+					windowContent.push([parsed[i].station, markerAndInfoWindow[j].direction, markerAndInfoWindow[j].schedule])
 				}
 	}
 
