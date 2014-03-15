@@ -136,10 +136,12 @@ function addMyMarker(){
       content: contentString
       
   });
+	var image = 'markericon.png';
 	var marker = new google.maps.Marker({
       position: myLocation,
       map: map,
-      title: 'You are here'
+      title: 'You are here',
+      icon: image
   });
 	Myinfowindow.open(map, marker);
   
@@ -149,13 +151,14 @@ function addMyMarker(){
 
 
 function addMarker(windowInfo, pos){
-	
+	var image = 'markericon.png';
 	console.log(windowInfo);
 	var stationMarker;
 	stationMarker = new google.maps.Marker({
     position: pos,
     title:"Hello World!",
-    map: map
+    map: map,
+    icon = image;
 });
 	
 
