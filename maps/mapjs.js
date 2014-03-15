@@ -35,6 +35,8 @@ function dataReady() {
         if(request.readyState ==4 && request.status == 200) {
                 scheduleData =JSON.parse(request.responseText);
                 line =scheduleData.line;
+                console.log("getLocationCount");
+  				addLineMarkers();
 
         }
         else if (request.readyState ==2 && request.status == 500)
@@ -51,10 +53,10 @@ function getLocation(){
   if (navigator.geolocation)
     {
     navigator.geolocation.getCurrentPosition(initialize);
+
     }
   else{alert("Geolocation is not supported by this browser.");}
-  console.log("getLocationCount");
-  addLineMarkers();
+
 }
   
 function initialize(position) {
