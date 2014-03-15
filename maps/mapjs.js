@@ -167,7 +167,7 @@ function addLineMarkers() {
 						var arrivalTime =0;
 						arrivalTime = scheduleData.schedule[j].Predictions[z].Seconds;
 						console.log("predictions for" + goodStationObject.station + " " + arrivalTime);
-		
+						console.log(arrivalTime);
 						markerAndInfoWindow.push = {station:goodStationObject, schedule:ArrivalTime, direction: scheduleData.schedule.Destination };
 					}
 				}
