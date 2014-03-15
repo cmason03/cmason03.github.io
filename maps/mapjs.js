@@ -46,7 +46,7 @@ function dataReady() {
         }
         else if (request.readyState ==2 && request.status == 500)
         {
-                alert("BADDDD, 500 status");
+                alert("Uh oh! 500 status. Refresh the page!");
         }
 
 }	
@@ -130,7 +130,7 @@ function closestStation(){
 
 function addMyMarker(){
 	var closestToMe = closestStation();
-	var contentString = "You are " + getDistance(myLocation, closestToMe[1]) + " km from " + closestToMe[0];
+	var contentString = "You are " + getDistance(myLocation, closestToMe[1]) + " km from the " + closestToMe[0]+ "T station";
 
 	var Myinfowindow = new google.maps.InfoWindow({
       content: contentString
