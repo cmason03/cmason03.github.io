@@ -194,7 +194,7 @@ function addMarker(windowInfo){
     infowindow.open(map,marker);
   });
 */
-}
+
 
 function addLineMarkers() {
 	var goodStationArray =[];
