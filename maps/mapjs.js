@@ -231,9 +231,9 @@ function addLineMarkers() {
 	
 	for(var i=0; i<numStations;i++){
 		if(parsed[i].line.toLowerCase() == line){
-			
+		var windowContent=[];
 			for(var j =0; j<markerAndInfoWindow.length;j++){
-				var windowContent=[];
+				
 				if(markerAndInfoWindow[j].station == parsed[i].station){
 					var position = stationLocation[i];
 					windowContent.push([parsed[i].station, markerAndInfoWindow[j].direction, markerAndInfoWindow[j].schedule]);
