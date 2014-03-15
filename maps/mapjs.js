@@ -160,15 +160,15 @@ function addLineMarkers() {
 		if(parsed[i].line.toLowerCase() == line){
 			var goodStationObect=new Object();
 			goodStationObject = parsed[i];
-			goodStationArray.push(goodStationObject);
 			for(var j =0; j<scheduleData.schedule.length;j++){
 				for(var z=0; z<scheduleData.schedule[j].Predictions.length; z++){
 					if(scheduleData.schedule[j].Predictions[z].Stop == goodStationObject.station){
-						var predictions = [];
-						pred = scheduleData.schedule[j].Predictions[z];
-						console.log("predictions for" + goodStationObject.station + pred);
-						predictionsArray.push(predictions);
-						markerAndInfoWindow.push = {station:goodStationObject, schedule:pred, direction: scheduleData.schedule.Destination };
+						var trainNumber = scheduleData.schedule[j].Position.Train;
+						var arrivalTime =0;
+						arrivalTime = scheduleData.schedule[j].Predictions[z].Seconds;
+						console.log("predictions for" + goodStationObject.station + " " + arrivalTime);
+		
+						markerAndInfoWindow.push = {station:goodStationObject, schedule:ArrivalTime, direction: scheduleData.schedule.Destination };
 					}
 				}
 			}
