@@ -141,7 +141,7 @@ function addMyMarker(){
       map: map,
       title: 'You are here'
   });
-	Myinfowindow.open(marker,map);
+	Myinfowindow.open(map);
   
 	google.maps.event.addDomListener(window, 'load', function(){
     Myinfowindow.open(map,marker);
