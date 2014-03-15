@@ -158,7 +158,7 @@ function addLineMarkers() {
 
 	for(var i =1; i<numStations; i++){
 		if(parsed[i].line.toLowerCase() == line){
-			var goodStationObect=0;
+			var goodStationObect=new Object();
 			goodStationObject = parsed[i];
 			console.log(goodStationObject);
 			goodStationArray.push(goodStationObject);
