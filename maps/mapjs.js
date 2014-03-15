@@ -165,7 +165,7 @@ function addLineMarkers() {
 				for(var z=0; z<scheduleData.schedule[j].Predictions.length; z++){
 					if(scheduleData.schedule[j].Predictions[z].Stop == goodStationObject.station){
 						var predictions = [];
-						pred = scheduleData.schedule[j].Predictions;
+						pred = scheduleData.schedule[j].Predictions[z];
 						console.log("predictions for" + goodStationObject.station + pred);
 						predictionsArray.push(predictions);
 						markerAndInfoWindow.push = {station:goodStationObject, schedule:pred, direction: scheduleData.schedule.Destination };
