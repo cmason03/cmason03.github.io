@@ -174,6 +174,7 @@ function addMyMarker(){
 function addMarker(windowInfo, position){
 console.log("add marker works");
 	var marker = createMarker(position);
+	marker.setMap(map);
 	var content = "<p>" + windowInfo[0][1] + "</p>";
 	for (var i =0; i< windowInfo.length;i++){
 		content+= "<p> Destination: " + windowInfo[i][1] + " Seconds: " + windowInfo[i][2] + "</p>";
