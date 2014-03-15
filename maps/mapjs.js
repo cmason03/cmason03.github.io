@@ -164,12 +164,13 @@ function addLineMarkers() {
 			goodStationArray.push(goodStationObject);
 			for(var j =0; j<scheduleData.schedule.length;j++){
 				console.log(j);
-				if(scheduleData.schedule[j].Destination == goodStationObject.station){
+				if(scheduleData.schedule[j].Predictions.stop == goodStationObject.station){
 					var predictions = [];
+
 					pred = scheduleData.schedule[j].Predictions;
 					console.log(pred);
 					predictionsArray.push(predictions);
-					markerAndInfoWindow.push = {station:goodStationObject, schedule:pred};
+					markerAndInfoWindow.push = {station:goodStationObject, schedule:pred, direction: scheduleData.schedule.Destination };
 					}
 			}
 }
