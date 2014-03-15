@@ -24,6 +24,9 @@ function parse() {
     request.open("get", "http://mbtamap.herokuapp.com/mapper/rodeo.json", true);
     request.onreadystatechange = dataReady;
     request.send(null);
+    
+    getLocation();
+    console.log("dataReadyCount");
 }
 
 
@@ -38,8 +41,7 @@ function dataReady() {
         {
                 alert("BADDDD, 500 status");
         }
-getLocation();
-console.log("dataReadyCount");
+
 }	
 
 
