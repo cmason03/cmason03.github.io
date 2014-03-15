@@ -8,6 +8,8 @@ var scheduleData = [];
 var line;
 var markerAndInfoWindow =[];
 var windowContent= [];
+var markerArray =[];
+
 
 
 
@@ -36,6 +38,7 @@ function dataReady() {
         if(request.readyState ==4 && request.status == 200) {
                 scheduleData =JSON.parse(request.responseText);
                 line =scheduleData.line;
+                addMyMarker();
   				addLineMarkers();
 
         }
@@ -150,17 +153,22 @@ function closestStation(){
 }
 
 function addMyMarker(){
-	//createMarker(myLocation);
+	var closestToMe = closestStation();
+	var contentString = "You are " + getDistance(myLocation, closestToMe) + " from "closestToMe);
+	console.log(contentString);
+
+
 }
 
 function addLineMarkers() {
 	var goodStationArray =[];
+	var newPoint;
 	
 	var predictionsArray= new Array();
 
 	for(var i =1; i<numStations; i++){
 		if(parsed[i].line.toLowerCase() == line){
-			var goodStationObect=new Object();
+			var goodStationObject= new Object();
 			goodStationObject = parsed[i];
 			for(var j =0; j<scheduleData.schedule.length;j++){
 				for(var z=0; z<scheduleData.schedule[j].Predictions.length; z++){
@@ -180,7 +188,7 @@ function addLineMarkers() {
 	
 	for(var i=0; i<numStations;i++){
 		if(parsed[i].line.toLowerCase() == line){
-			createMarker(stationLocation[i]);
+			newPoint= stationLocation.[i];
 			var windowContent = [];
 			for(var j =0; j<markerAndInfoWindow.length;j++){
 				
@@ -190,7 +198,6 @@ function addLineMarkers() {
 
 				}
 	}
-
 
 
 			}
