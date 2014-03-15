@@ -174,7 +174,8 @@ function addMyMarker(){
 
 function addMarker(windowInfo, pos){
 	console.log(pos);
-	var stationMarker = new google.maps.Marker({
+	var stationMarker;
+	stationMarker = new google.maps.Marker({
     position: pos,
     title:"Hello World!",
     map:map
