@@ -163,7 +163,7 @@ function addLineMarkers() {
 			for(var j =0; j<scheduleData.schedule.length;j++){
 				for(var z=0; z<scheduleData.schedule[j].Predictions.length; z++){
 					if(scheduleData.schedule[j].Predictions[z].Stop == goodStationObject.station){
-					
+						var TrainDestination;
 						var arrivalTime =0;
 						arrivalTime = scheduleData.schedule[j].Predictions[z].Seconds;
 						trainDestination = scheduleData.schedule[j].Destination;
