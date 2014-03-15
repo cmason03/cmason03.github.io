@@ -163,7 +163,8 @@ function addLineMarkers() {
 			for(var j =0; j<scheduleData.schedule.length;j++){
 				for(var z=0; z<scheduleData.schedule[j].Predictions.length; z++){
 					if(scheduleData.schedule[j].Predictions[z].Stop == goodStationObject.station){
-						var trainNumber = scheduleData.schedule[j].Position.Train;
+						var trainNumber; 
+						trainNumber = scheduleData.schedule[j].Position.Train;
 						var arrivalTime =0;
 						arrivalTime = scheduleData.schedule[j].Predictions[z].Seconds;
 						console.log("predictions for" + goodStationObject.station + " " + arrivalTime);
