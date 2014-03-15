@@ -40,7 +40,7 @@ function dataReady() {
                 scheduleData =JSON.parse(request.responseText);
                 line =scheduleData.line;
                 
-  				addLineMarkers();
+  				
 
         }
         else if (request.readyState ==2 && request.status == 500)
@@ -73,7 +73,7 @@ function initialize(position) {
        
   map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
-  
+  addLineMarkers();
   addMyMarker();
   
 		}
@@ -178,7 +178,7 @@ function addMarker(windowInfo, pos){
 	stationMarker = new google.maps.Marker({
     position: pos,
     title:"Hello World!",
-    map:map
+    map: map
 });
 	console.log(stationMarker);
 
