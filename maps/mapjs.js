@@ -190,6 +190,7 @@ function addMarker(windowInfo, position){
 
 
 function addLineMarkers() {
+	console.log("addLineMarkers called");
 	var goodStationArray =[];
 	var newPoint;
 	
