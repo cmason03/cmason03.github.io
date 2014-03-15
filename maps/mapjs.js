@@ -157,7 +157,7 @@ function addLineMarkers() {
 		if(parsed[i].line.toLowerCase() == line){
 			goodStationObject = parsed[i];
 			for(var j =0; j<scheduleData.schedule.length;j++){
-				if(scheduleData.schedule[j].Destination == goodStation){
+				if(scheduleData.schedule[j].Destination == goodStationObject){
 					predictions = scheduleData.schedule[j].Predictions;
 					markerAndInfoWindow[i] = {station:goodStationObject, schedule:predictions};
 					}
