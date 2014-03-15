@@ -83,7 +83,7 @@ function createMarker(pos) {
 
     });
 return marker}
-
+/*
     function createInfoWindow(station) {
 
     	var content = [];
@@ -97,7 +97,7 @@ return marker}
 			
 }}
 return stationInfoWindow;}
-
+*/
 
 function getDistance(myLocation,stationLocation){
 
@@ -150,6 +150,7 @@ function addMyMarker(){
 	//createMarker(myLocation);
 }
 
+/*
 function addLineMarkers(){
 	
 	for( var i=1; i<numStations; i++){
@@ -164,7 +165,7 @@ function addLineMarkers(){
 		
 		drawPolyLine(line);
 }}
-		
+*/		
 		
 
 	
