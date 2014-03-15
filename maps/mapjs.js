@@ -133,15 +133,15 @@ function addMyMarker(){
 	var contentString = "You are " + getDistance(myLocation, closestToMe[1]) + " km from " + closestToMe[0];
 
 	var Myinfowindow = new google.maps.InfoWindow({
-      content: contentString,
-      position: myLocation
+      content: contentString
+      
   });
 	var marker = new google.maps.Marker({
       position: myLocation,
       map: map,
       title: 'You are here'
   });
-	Myinfowindow.open(map);
+	Myinfowindow.open(map, marker);
   
 	google.maps.event.addDomListener(window, 'load', function(){
     Myinfowindow.open(map,marker);
