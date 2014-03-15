@@ -166,7 +166,7 @@ function addLineMarkers() {
 					
 						var arrivalTime =0;
 						arrivalTime = scheduleData.schedule[j].Predictions[z].Seconds;
-						trainDestination = schedule.schedule[j].Destination;
+						trainDestination = scheduleData.schedule[j].Destination;
 						console.log("predictions for" + goodStationObject.station + " " + arrivalTime);
 						console.log(arrivalTime);
 						console.log(goodStationObject.station);
