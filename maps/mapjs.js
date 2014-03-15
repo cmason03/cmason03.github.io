@@ -9,6 +9,7 @@ var line;
 var markerAndInfoWindow =[];
 var windowContent= [];
 var markerArray =[];
+var stationMarker = new Object();
 
 
 
@@ -173,10 +174,10 @@ function addMyMarker(){
 
 function addMarker(windowInfo, pos){
 	console.log(pos);
-//	var stationMarker = new google.maps.Marker({
-  //  position: pos,
-    //title:"Hello World!"
-//});
+	var stationMarker = new google.maps.Marker({
+    position: pos,
+    title:"Hello World!"
+});
 
 
 
@@ -242,8 +243,7 @@ function addLineMarkers() {
 
 addMarker(windowContent,position);
 drawPolyLine();
-//
-//stationMarker.setmap(map);
+
 	}
 				
 
