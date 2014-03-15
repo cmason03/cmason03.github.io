@@ -172,7 +172,7 @@ function addMyMarker(){
   });}
 
 function addMarker(windowInfo, position){
-
+console.log("add marker works")
 	var marker = createMarker(position);
 	var content = "<p>" + windowInfo[0][1] + "</p>";
 	for (var i =0; i< windowInfo.length;i++){
@@ -246,8 +246,6 @@ function addLineMarkers() {
 		}
 
 addMarker(windowContent,position);
-
-
 drawPolyLine();
 	}
 				
