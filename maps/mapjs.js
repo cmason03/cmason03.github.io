@@ -149,13 +149,13 @@ function addMyMarker(){
 }
 
 function addLineMarkers() {
-	var goodStationObject;
+	var goodStationArray = [];
 	markerAndInfoWindow =[];
 	var predictions = [];
 
 	for(var i =1; i<numStations; i++){
 		if(parsed[i].line.toLowerCase() == line){
-			goodStationObject = parsed[i];
+			goodStationArray[i] = parsed[i];
 			for(var j =0; j<scheduleData.schedule.length;j++){
 				if(scheduleData.schedule[j].Destination == goodStationObject){
 					predictions = scheduleData.schedule[j].Predictions;
