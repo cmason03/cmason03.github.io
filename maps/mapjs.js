@@ -171,7 +171,29 @@ function addMyMarker(){
     infowindow.open(map,marker);
   });
 
+function addMarker(windowInfo){
+	var content = "<p>" + windowInfo[0][1] + "</p>";
+	for (var i =0; i< windowInfo.length){
+		content+ = "<p> Destination: " + windowInfo[i][1] + " Seconds: " + windowInfo[i][2] "</p>"
 
+	}
+	console.log(content);
+/*
+	var contentString = "You are " + getDistance(myLocation, closestToMe[1]) + " km from " + closestToMe[0];
+	console.log(contentString);
+
+	var infowindow = new google.maps.InfoWindow({
+      content: contentString
+  });
+	var marker = new google.maps.Marker({
+      position: myLocation,
+      map: map,
+      title: 'You are here'
+  });
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
+  });
+*/
 }
 
 function addLineMarkers() {
@@ -217,7 +239,11 @@ function addLineMarkers() {
 			}
 
 		}
-console.log(windowContent);
+		
+addMarker(windowContent);
+
+
+drawPolyLine();
 	}
 				
 
