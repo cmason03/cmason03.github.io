@@ -158,7 +158,6 @@ function closestStation(){
 function addMyMarker(){
 	//var closestToMe = closestStation();
 	//var contentString = "You are " + getDistance(myLocation, closestToMe[1]) + " from " + closestToMe[0];
-	console.log(contentString);
 
 
 }
