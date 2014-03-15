@@ -174,7 +174,7 @@ function addLineMarkers() {
 						markerAndInfoWindow.push = {station:goodStationObject, schedule:pred, direction: scheduleData.schedule.Destination };
 					}
 					//else{console.log("fuck");}
-				}
+				//}
 			}
 }}
 		
