@@ -177,7 +177,7 @@ function addLineMarkers() {
 
 	
 	var windowContent= [];
-	for(var i=0; i<numstations;i++){
+	for(var i=0; i<numStations;i++){
 		if(parsed[i].line.toLowerCase() == line){
 			createMarker(stationLocation[i]);
 			for(var j =0; j<markerAndInfoWindow.length;j++){
