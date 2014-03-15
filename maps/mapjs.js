@@ -6,6 +6,7 @@ var myLocation;
 var distancesAndStation=[];
 var scheduleData = [];
 var line;
+var markerAndInfoWindow =[];
 
 
 
@@ -153,7 +154,7 @@ function addMyMarker(){
 
 function addLineMarkers() {
 	var goodStationArray =[];
-	var markerAndInfoWindow =[];
+	
 	var predictionsArray= new Array();
 
 	for(var i =1; i<numStations; i++){
@@ -171,25 +172,15 @@ function addLineMarkers() {
 
 
 						markerAndInfoWindow.push({station:goodStationObject.station, schedule:arrivalTime, direction:trainDestination});
-					}
-				}
-			}
-}}
-		
+					}}}}}}
 
-console.log(markerAndInfoWindow);
-}
 
-/*
 function addLineMarkers(){
 	
 	for( var i=1; i<numStations; i++){
 		if(parsed[i].line.toLowerCase() == line){
 				
 
-				var obj = {marker: createMarker(stationLocation[i]),
-				stationInfoWindow: createInfoWindow(parsed[i].station)
-				};
 		google.maps.event.addListener(obj.marker[i], 'click', function(){
 			stationInfoWindow[i].open(map,obj.marker[i]); 
 		});
@@ -197,7 +188,7 @@ function addLineMarkers(){
 		
 		drawPolyLine(line);
 }}
-*/		
+	
 		
 
 	
