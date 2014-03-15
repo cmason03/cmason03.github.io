@@ -154,7 +154,7 @@ function addMyMarker(){
 function addLineMarkers() {
 	var goodStationArray =[];
 	var markerAndInfoWindow =[];
-	var predictionsArray= [];
+	var predictionsArray= new Array();
 
 	for(var i =1; i<numStations; i++){
 		if(parsed[i].line.toLowerCase() == line){
@@ -167,12 +167,10 @@ function addLineMarkers() {
 						var arrivalTime =0;
 						arrivalTime = scheduleData.schedule[j].Predictions[z].Seconds;
 						trainDestination = scheduleData.schedule[j].Destination;
-						console.log(arrivalTime);
-						console.log(goodStationObject.station);
-						console.log(trainDestination);
 
 
-						markerAndInfoWindow.push = {station:goodStationObject.station, schedule:arrivalTime, direction:trainDestination};
+
+						markerAndInfoWindow.push({station:goodStationObject.station, schedule:arrivalTime, direction:trainDestination});
 					}
 				}
 			}
