@@ -235,7 +235,8 @@ function addLineMarkers() {
 
 addMarker(windowContent,position);
 drawPolyLine();
-stationMarker.setmap(map);
+//
+//stationMarker.setmap(map);
 	}
 				
 
