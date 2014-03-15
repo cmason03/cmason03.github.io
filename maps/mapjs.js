@@ -154,7 +154,7 @@ function addLineMarkers() {
 	var predictions = [];
 
 	for(var i =1; i<numStations; i++){
-		if(parsed[i].line.toLowerCase()= line){
+		if(parsed[i].line.toLowerCase() == line){
 			goodStationObject = parsed[i];
 			for(var j =0; j<scheduleData.schedule.length;j++){
 				if(scheduleData.schedule[j].Destination == goodStation){
