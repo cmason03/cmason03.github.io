@@ -172,6 +172,7 @@ function addMyMarker(){
   });}
 
 function addMarker(windowInfo, position){
+	console.log(windowInfo + position);
 	var marker = createMarker(position);
 	
 	var content = "<p>" + windowInfo[0][1] + "</p>";
