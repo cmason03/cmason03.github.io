@@ -173,7 +173,7 @@ function addMyMarker(){
 
 function addMarker(windowInfo){
 	var content = "<p>" + windowInfo[0][1] + "</p>";
-	for (var i =0; i< windowInfo.length){
+	for (var i =0; i< windowInfo.length;i++){
 		content+ = "<p> Destination: " + windowInfo[i][1] + " Seconds: " + windowInfo[i][2] "</p>"
 
 	}
@@ -239,7 +239,7 @@ function addLineMarkers() {
 			}
 
 		}
-		
+
 addMarker(windowContent);
 
 
