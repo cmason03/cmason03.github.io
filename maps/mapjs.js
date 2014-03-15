@@ -239,11 +239,11 @@ function addLineMarkers() {
 				}
 	}
 
+addMarker(windowContent,position);
+drawPolyLine();
 
 			}
 
-addMarker(windowContent,position);
-drawPolyLine();
 		}
 
 
