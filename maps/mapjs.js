@@ -169,7 +169,7 @@ function addLineMarkers() {
 						trainDestination = scheduleData.schedule[j].Destination;
 						console.log(arrivalTime);
 						console.log(goodStationObject.station);
-						console.log(scheduleData.schedule.Destination);
+						console.log(trainDestination);
 						markerAndInfoWindow.push = {station:goodStationObject.station, schedule:arrivalTime, direction:trainDestination};
 					}
 				}
