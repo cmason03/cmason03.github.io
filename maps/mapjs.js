@@ -225,7 +225,6 @@ function addLineMarkers() {
 				if(markerAndInfoWindow[j].station == parsed[i].station){
 					var position = stationLocation[i];
 					windowContent.push([parsed[i].station, markerAndInfoWindow[j].direction, markerAndInfoWindow[j].schedule]);
-					console.log(position);
 				}
 	}
 
