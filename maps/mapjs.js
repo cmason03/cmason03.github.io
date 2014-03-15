@@ -10,6 +10,7 @@ var markerAndInfoWindow =[];
 var windowContent= [];
 var markerArray =[];
 var stationMarker = new Object();
+var windowContent =[];
 
 
 
@@ -193,7 +194,7 @@ function addMarker(windowInfo, pos){
 
 	}
 	var infowindow = new google.maps.InfoWindow({content:content});
-	google.maps.event.addListener(stationMarker, "click",function(){infowindow.open(map,marker);});
+	google.maps.event.addListener(stationMarker, "click",function(){infowindow.open(map,stationMarker);});
 	return stationMarker;
 	console.log("it gets here");
 	
