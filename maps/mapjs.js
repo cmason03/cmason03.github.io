@@ -66,8 +66,8 @@ function initialize(position) {
   map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
   
-  addLineMarkers();
-  addMyMarker();
+  //addLineMarkers();
+  //addMyMarker();
   
 		}
 
