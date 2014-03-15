@@ -163,6 +163,7 @@ function addLineMarkers() {
 			console.log(goodStationObject);
 			goodStationArray.push(goodStationObject);
 			for(var j =0; j<scheduleData.schedule.length;j++){
+				console.log(j);
 				if(scheduleData.schedule[j].Destination == goodStationObject.station){
 					var predictions = [];
 					predictions = scheduleData.schedule[j].Predictions;
