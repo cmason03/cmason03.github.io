@@ -171,9 +171,9 @@ function addMyMarker(){
   });}
 
 function addMarker(windowInfo, pos){
-	console.log(position);
+	console.log(pos);
 	var stationMarker = new google.maps.Marker({
-    position: position,
+    position: pos,
     title:"Hello World!"
 });
 
