@@ -6,8 +6,6 @@ var myLocation;
 var distancesAndStation=[];
 var scheduleData = [];
 var line;
-var predictionsArray = [];
-var markerArray =[];
 
 
 
@@ -66,7 +64,7 @@ function initialize(position) {
   map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
   
-  //addLineMarkers();
+  addLineMarkers();
   //addMyMarker();
   
 		}
@@ -150,11 +148,33 @@ function addMyMarker(){
 	//createMarker(myLocation);
 }
 
+function addLineMarkers() {
+	var goodStationObject;
+	markerAndInfoWindow =[];
+	var predictions = [];
+
+	for(var i =1; i<numStations; i++){
+		if(parsed[i].line.toLowerCase()= line){
+			goodStationObject = parsed[i];
+			for(var j =0; j<scheduleData.schedule.length;j++){
+				if(scheduleData.schedule[j].Destination == goodStation){
+					predictions = scheduleData.schedule[j].Predictions;
+					markerAndInfoWindow[i] = {station:goodStationObject, schedule:predictions};
+					}
+			}
+}
+		
+	}
+console.log(markerAndInfoWindow);
+}
+
 /*
 function addLineMarkers(){
 	
 	for( var i=1; i<numStations; i++){
 		if(parsed[i].line.toLowerCase() == line){
+				
+
 				var obj = {marker: createMarker(stationLocation[i]),
 				stationInfoWindow: createInfoWindow(parsed[i].station)
 				};
