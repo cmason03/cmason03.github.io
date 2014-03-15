@@ -165,6 +165,7 @@ function addLineMarkers() {
 			for(var j =0; j<scheduleData.schedule.length;j++){
 				console.log(j);
 				for(var z=0; z<scheduleData.schedule[j].Predictions.length<0; z++){
+					console.log("met z criteria");
 				if(scheduleData.schedule[j].Predictions[z].Stop == goodStationObject.station){
 					var predictions = [];
 					pred = scheduleData.schedule[j].Predictions;
