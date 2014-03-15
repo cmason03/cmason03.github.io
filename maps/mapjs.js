@@ -241,7 +241,7 @@ function addLineMarkers() {
 	}
 console.log(windowContent);
 addMarker(windowContent,position);
-drawPolyLine();
+drawPolyLine(line);
 
 			}
 
