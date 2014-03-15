@@ -239,7 +239,7 @@ function addLineMarkers() {
 					windowContent.push([parsed[i].station, markerAndInfoWindow[j].direction, markerAndInfoWindow[j].schedule]);
 				}
 	}
-
+console.log(windowContent);
 addMarker(windowContent,position);
 drawPolyLine();
 
