@@ -167,7 +167,7 @@ function addMyMarker(){
       map: map,
       title: 'You are here'
   });
-  google.maps.event.addListener(marker, 'click', function() {
+  google.maps.event.addListener(marker, 'load', function() {
     infowindow.open(map,marker);
   });
 
