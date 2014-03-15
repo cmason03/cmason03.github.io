@@ -133,7 +133,7 @@ function addMyMarker(){
 	var contentString = "You are " + getDistance(myLocation, closestToMe[1]) + " km from " + closestToMe[0];
 
 	var Myinfowindow = new google.maps.InfoWindow({
-      content: contentString.
+      content: contentString,
       position: myLocation
   });
 	var marker = new google.maps.Marker({
