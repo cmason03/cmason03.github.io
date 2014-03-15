@@ -175,6 +175,7 @@ function addMyMarker(){
 
 function addMarker(windowInfo, pos){
 	console.log(pos);
+	console.log(windowInfo);
 	var stationMarker;
 	stationMarker = new google.maps.Marker({
     position: pos,
@@ -186,7 +187,6 @@ function addMarker(windowInfo, pos){
 
 	
 	stationMarker.setMap(map);
-	console.log("does it get to 184?");
 	
 	var content = "<p>" + windowInfo[0][0] + "</p>";
 	for (var i =0; i< windowInfo.length;i++){
