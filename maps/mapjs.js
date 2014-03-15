@@ -79,7 +79,7 @@ function initialize(position) {
 
 
 
-
+/*
 function createMarker(pos) {
     var iconImage = 'markerIcon.png';
     var marker = new google.maps.Marker({       
@@ -89,7 +89,7 @@ function createMarker(pos) {
 
     });
 return marker}
-/*
+
     function createInfoWindow(station) {
 
     	var content = [];
@@ -170,7 +170,7 @@ function addMyMarker(){
     infowindow.open(map,marker);
   });}
 
-function addMarker(windowInfo, position){
+function addMarker(windowInfo, pos){
 	console.log(position);
 	var stationMarker = new google.maps.Marker({
     position: position,
