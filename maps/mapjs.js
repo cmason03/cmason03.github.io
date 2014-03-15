@@ -176,11 +176,12 @@ function addMarker(windowInfo, pos){
 	console.log(pos);
 	var stationMarker = new google.maps.Marker({
     position: pos,
-    title:"Hello World!"
+    title:"Hello World!",
+    map:map
 });
 
 
-	return stationMarker;
+	
 	stationMarker.setMap(map);
 	console.log("does it get to 184?");
 	
