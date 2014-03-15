@@ -53,6 +53,8 @@ function getLocation(){
     navigator.geolocation.getCurrentPosition(initialize);
     }
   else{alert("Geolocation is not supported by this browser.");}
+  console.log("getLocationCount");
+  addLineMarkers();
 }
   
 function initialize(position) {
@@ -65,8 +67,7 @@ function initialize(position) {
        
   map = new google.maps.Map(document.getElementById("map-canvas"),
             mapOptions);
-  console.log("getLocationCount");
-  addLineMarkers();
+  
   //addMyMarker();
   
 		}
