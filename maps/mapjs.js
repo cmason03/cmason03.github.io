@@ -138,7 +138,6 @@ function closestStation(){
 	for(var i =1; i<numStations; i++){
 		distancesAndStation[i] = { "distance": getDistance(myLocation, stationLocation[i]), "station": parsed[i].station };
 		distanceArray.push(getDistance(myLocation, stationLocation[i]));	
-		console.log(getDistance(myLocation, stationLocation[i]));
 	}
 
 	
@@ -157,8 +156,20 @@ function closestStation(){
 
 function addMyMarker(){
 	var closestToMe = closestStation();
-	var contentString = "You are " + getDistance(myLocation, closestToMe[1]) + " from " + closestToMe[0];
+	var contentString = "You are " + getDistance(myLocation, closestToMe[1]) + " km from " + closestToMe[0];
 	console.log(contentString);
+
+	var infowindow = new google.maps.InfoWindow({
+      content: contentString
+  });
+	var marker = new google.maps.Marker({
+      position: myLocation,
+      map: map,
+      title: 'You are here'
+  });
+  google.maps.event.addListener(marker, 'click', function() {
+    infowindow.open(map,marker);
+  });
 
 
 }
