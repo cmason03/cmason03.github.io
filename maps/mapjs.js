@@ -173,10 +173,10 @@ function addLineMarkers() {
 						predictionsArray.push(predictions);
 						markerAndInfoWindow.push = {station:goodStationObject, schedule:pred, direction: scheduleData.schedule.Destination };
 					}
-					else{console.log("fuck")}
+					else{console.log("fuck");}
 				}
 			}
-}
+}}
 		
 
 console.log(markerAndInfoWindow);
