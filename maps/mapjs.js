@@ -160,12 +160,12 @@ function addLineMarkers() {
 		if(parsed[i].line.toLowerCase() == line){
 			var goodStationObect=new Object();
 			goodStationObject = parsed[i];
-			console.log(goodStationObject);
+			console.log("i counter" + i);
 			goodStationArray.push(goodStationObject);
 			for(var j =0; j<scheduleData.schedule.length;j++){
-				console.log(j);
+				console.log("j counter" + j);
 				for(var z=0; z<scheduleData.schedule[j].Predictions.length<0; z++){
-					console.log("met z criteria");
+					console.log("z counter" + z);
 				if(scheduleData.schedule[j].Predictions[z].Stop == goodStationObject.station){
 					var predictions = [];
 					pred = scheduleData.schedule[j].Predictions;
