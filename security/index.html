@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1>Introduction</h1>
+
+<p>Victor Chao's web application young-stream-7205.herokuapp.com has many security concerns that need to be addressed before the app can be released. In this report, I will identify the security flaws in Victor's code as well as recommend coding solutions to improve application security.</p>
+
+
+<h1>Methodology</h1>
+
+<p>I was successfully able to use the curl command in the terminal to test for succptibility to code injection. I also tested the applications response to different queries using the search bar. Lastly, I manually searched through Victor's coding to look for any inherent security flaws, such as how cross origin resource sharing is setup. </p>
+
+
+<h1>Abstract of Findings</h1>
+
+<p>I was able to uncover three major security risks within the application. The most severe risk is the application's vulnerability to code injection. Users have the ability to insert script into Victor's database that can completely disable the apps functionality. The second risk that I found was that Victor allowed for cross origin resource sharing from any client. This gives anyone the ability to attack the app with skewed data or malicious code. The last security concern is that clients have the ability to max out the storage capability of the database through repeated data input, causing the database to crash. </p>
+
+<h2>Code Injection</h2>
+<h3>Severity: HIGH </h3>
+<p>The first major security flaw that I found was that the application allows clients to inject javascript code using curl or a proxy intercept. The client is capable of doing this because web.js uses data directly from the database inside the html body. By injected code into one of the data fields such as "username", a client has nearly endless capabilities to affect the functionality of the web app. For example, I was able to insert a YouTube video in the username block of one of Victor's dabatase entries using the code: <p></p>
+
+<code> curl --data "game_title=frogger&amp;username=&lt;iframe src='http://www.wimp.com/hamstercarrots/'&gt;&lt;/iframe&gt;&amp;score=1000000&amp;grid=""" http://young-stream-7205.herokuapp.com/submit.json </code><p></p>
+
+<img src= "hamster.png">
+<p></p>
+<p>To eliminate the risk of code injection, the application should include a function to eliminate special characters (such as &amp or &gt) when interpretting the json from the database. Using this method, any script coming from the database will become harmless text. One method of doing this is downloading the "sanitize" package for node.js. "Sanitizing" any client inputs in Victor's code will eliminate the threat of a client adding script. </p>
+
+<p></p>
+
+<h2>Cross Origin Resource Sharing</h2>
+<h3>Severity: HIGH </h3>
+<p>Victor's code enables CORS for any client in this line of code: </p> 
+<code>res.header("Access-Control-Allow-Origin", "*");</code>
+<p> This enables any user to easily post false data in Victor's database. For example, any computer could insert a fake username, score, and grid input using curl. This eliminates the purpose of victors app as the top scores could easily be falsified. This can be seen in the screenshot above, where I added a video as a username and a false score.  </p>
+<p>To eliminate the risk of falsified input data, Victor must turn off resource sharing for all users and only allow posts from the site where the 2048 game will be hosted.</p>
+
+
+<h2>Database Flooding</h2>
+<h3>Severity: Medium </h3>
+
+<p>The last major security flaw that I found in Victors code was that the code doesn't include any security against a client sending excessive data entries to the database. By sending hundreds of curl data posts, a user could meet the storage limits of the database and cause the the web app to no longer accept more data. </p>
+
+<p>To prevent this from happening, the web app should include code to limit how often one client can post data. A 5 to 10 second buffer between posts from one client should prevent a serious attack. </p>
+
+<h2>Other Security Concerns</h2>
+<ul>
+	<li>Users can insert as many fields as they want into the database, allowing for any size data input with one post.</li>
+	<li>Using username[$ne] = xxxxx as a query in the web address, a client can see the all scores other than their own. If the database included more sensitive information, such as login information or credit card numbers, this would be a very dangerous flaw.  </li>
+</ul>
+
+
+<h1>Conclusion</h1>
+
+<p> In conclusion, it is extremely important to be aware of security vulnerabilities when using client inputs, databases, and cross origin resource sharing. Victor's web application has several security holes that could prove fatal for the app. Fortunately, all of them can be fixed by changing a few lines of code. </p>
+
+
+
+
+
+</head>
+<body></body>
+</html>
